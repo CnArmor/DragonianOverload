@@ -1,0 +1,62 @@
+0.3.0
+- Patched dragonian weapon restriction. Now dragonians can equip all non-race-restricted melee weapons, even modded ones!
+	- This is done by patching HAR racce restriction and should theoretically work with all mods without needing furhter patching.
+	- They still refuse to shoot. Yes I made them this way.
+
+0.2.2
+- Actually implemented working melee damage multiplier and melee weapon cooldown multiplier.
+
+- Changed method of granting ability to dragonian.
+
+0.2.1
+- Added visual effect and sound to Dragonblood Overload.
+
+0.2.0
+- Added new ability to Dragonians. Introducing Dragonblood Overload! This grants dragonians massive combat buffs but leaves permanent burn on brain and heart.
+	- Dragonblood Overload: 
+		- When activated, granting the folowing buffs:
+			+50% Consciousness
+			+50% Blood Pumping
+			+2 Move Speed
+			-50% Incoming Damage
+			x120% Melee Damage
+			x60% Melee Cooldown
+		- Hoever also causing the following drawbacks:
+ 			x150% Bleeding Factor
+			Every 3~5 seconds, leave permanent burn of 0.2~0.4 point on brain (33% chance) or heart (67% chance)
+		- Lasts for 4 hours (167 seconds).
+		- Cooldown 1 day.
+		- On average takes about 7 days for the permanent burns to be healed by Auto Recovery. (soft cooldown)
+		- Won't damage brain or heart below 20%, but at that point your dragonian would be downed after ability ended.
+		- Also extreme high risk of death from bleeding and other sources of damage.
+
+- Nerfed Dragonian raw combat capacity accordingly. Overall you should have more power when using Dragonblood Overload, but it comes with a cost.
+	- baseHealthScale: 3 -> 1.8
+	- Fist attack and teeth attack power: 18 -> 14
+	- Tail attack power: 20 -> 16
+
+0.1.0
+- Completely rewrote the code for Auto Recovery. More customizable through xml and added drawbacks when healing permanent scars.
+	- Auto Recovery:
+		- When permanent scar exists, becomes active and cause +50% hunger rate & +20% rest fall rate.
+		- Heals a random scar for 0.1~0.3 points every 2~3 in game hours.
+		- All mentioned above adjustable through xml.
+
+0.0.1
+- Merged Dragonian_Female and Dragonian_Male into one race.
+	-Some defNames are kept as *_Female for legacy and compatibility reason.
+
+- Male dragonians have distinct face now.
+
+- Added 1 male dragonian hairstyle, retracted from dragonian animal mod.
+
+- Added bionic tail attack to bionic tail.
+	- Bionic tail attack can briefly stun the enemy it hits.
+	- Power 22, cooldown 3
+
+- Dragonian apparels are now categorized.
+
+- Removed Harmony patch to keep apparels color always white. This now uses vanilla method. Also rewrote DR_Apparel.xml to achieve that.
+
+- Placeholder apparel graphics for male dragonians so they don't appear headless.
+
