@@ -1,0 +1,26 @@
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\Assemblies\Dragonian.dll
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\Assemblies\Dragonian.pdb
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\Source\obj\Debug\Dragonian.csproj.CoreCompileInputs.cache
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\Source\obj\Debug\Dragonian.dll
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\Source\obj\Debug\Dragonian.pdb
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\Assemblies\Dragonian.dll
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\Assemblies\Dragonian.pdb
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\Source\obj\Debug\Dragonian.csprojAssemblyReference.cache
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\Source\obj\Debug\Dragonian.csproj.CopyComplete
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\1.1\Source\obj\Debug\Dragonian.csprojAssemblyReference.cache
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\1.1\Source\obj\Debug\Dragonian.dll
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\1.1\Source\obj\Debug\Dragonian.pdb
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\1.1\Assemblies\Dragonian.dll
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\1.1\Assemblies\Dragonian.pdb
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\1.2\Assemblies\Dragonian.dll
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\1.2\Assemblies\Dragonian.pdb
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\1.2\Source\obj\Debug\Dragonian.csprojAssemblyReference.cache
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\1.2\Source\obj\Debug\Dragonian.csproj.CoreCompileInputs.cache
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\1.2\Source\obj\Debug\Dragonian.dll
+E:\Program Files (x86)\SteamLibrary\steamapps\common\RimWorld\Mods\DragonianRace Steam Edition\1.2\Source\obj\Debug\Dragonian.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Dragonian Overload\1.3\Assemblies\Dragonian.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Dragonian Overload\1.3\Assemblies\Dragonian.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Dragonian Overload\1.3\Source\obj\Debug\Dragonian.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Dragonian Overload\1.3\Source\obj\Debug\Dragonian.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Dragonian Overload\1.3\Source\obj\Debug\Dragonian.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Dragonian Overload\1.3\Source\obj\Debug\Dragonian.pdb
