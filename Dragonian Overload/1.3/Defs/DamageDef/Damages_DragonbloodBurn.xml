@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DamageDef>
+		<defName>Dragonian_DragonbloodBurn</defName>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<label>dragonblood burn</label>
+		<hasForcefulImpact>false</hasForcefulImpact>
+		<makesBlood>false</makesBlood>
+		<canInterruptJobs>false</canInterruptJobs>
+		<externalViolence>false</externalViolence>
+		<deathMessage>{0} has been killed by prolonged dragonblood overload.</deathMessage>
+		<hediff>Dragonian_DragonbloodBurn</hediff>
+		<armorCategory>Heat</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>10</defaultDamage>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<combatLogRules>Damage_Flame</combatLogRules>
+	</DamageDef>
+</Defs>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AlienRace.BackstoryDef Name="Dragonian_Base" Abstract="True">
+		<forcedHediffs>
+			<li>Dragonian_AutoRecovery</li>
+		</forcedHediffs>    
+	</AlienRace.BackstoryDef>
+
+
+	<AlienRace.BackstoryDef ParentName="Dragonian_Base"	Name="BaseDragonianBackStory" Abstract="True">
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	</AlienRace.BackstoryDef>
+
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_WildChild</defName>
+		<title>Dragonian wild born</title>
+		<titleShort>wild born</titleShort>
+		<baseDescription>[PAWN_nameDef] is wild dragonian.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>-8</amount>
+			</li>
+			<li>
+				<defName>Melee</defName>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>-1</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>-1</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-8</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>3</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Caring</li>
+			<li>Intellectual</li>
+			<li>Artistic</li>
+			<li>Cooking</li>
+			<li>Crafting</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianStory</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Wild</defName>
+		<title>Wild Dragonian</title>
+		<titleShort>Wild Dragonian</titleShort>
+		<baseDescription>[PAWN_nameDef] is wild dragonian</baseDescription>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>-8</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-8</amount>
+			</li>
+			<li>
+				<defName>Melee</defName>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>-1</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>-1</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Caring</li>
+			<li>Intellectual</li>
+			<li>Artistic</li>
+			<li>Cooking</li>
+			<li>Crafting</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianStory</li>
+			<li>DragonianWild</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_SlaveChild</defName>
+		<title>Abandoned Dragonian</title>
+		<titleShort>abandoned</titleShort>
+		<baseDescription>[PAWN_nameDef] is a dragonian raised by human hands.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>-8</amount>
+			</li>
+			<li>
+				<defName>Melee</defName>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-8</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>-1</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>-1</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Caring</li>
+			<li>Intellectual</li>
+			<li>Artistic</li>
+			<li>Cooking</li>
+			<li>Crafting</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianStory</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Slave</defName>
+		<title>Abandoned Dragonian</title>
+		<titleShort>abandoned</titleShort>
+		<baseDescription>[PAWN_nameDef] is a dragonian raised by human hands.</baseDescription>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>-8</amount>
+			</li>
+			<li>
+				<defName>Melee</defName>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-8</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>-1</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>-1</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Caring</li>
+			<li>Intellectual</li>
+			<li>Artistic</li>
+			<li>Cooking</li>
+			<li>Crafting</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianStory</li>
+			<li>DragonianSlave</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	
+</Defs>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <FactionDef>
+    <defName>Dragonians_Hidden</defName>
+    <label>dragonians_hidden</label>
+    <pawnSingular>dragonian</pawnSingular>
+    <pawnsPlural>dragonians</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <fixedName>Dragonians</fixedName>
+    <factionIconPath>World/WorldObjects/Expanding/Sites/Manhunters</factionIconPath>
+    <hidden>true</hidden>
+    <autoFlee>false</autoFlee>
+    <techLevel>Animal</techLevel>
+	<!-- <hairTags> 
+      <li>DR_Hair</li>
+      <li>DR_Hair_Male</li>
+	</hairTags> -->
+		<raidLootValueFromPointsCurve>
+		<points>
+			<li>(35, 15)</li>
+			<li>(100, 120)</li>
+			<li>(1000, 500)</li>
+			<li>(2000, 800)</li>
+			<li>(4000, 1000)</li>
+		</points>
+	</raidLootValueFromPointsCurve>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>DragonianStory</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+  </FactionDef>
+  
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>DR_PlayerColony</defName>
+    <label>New Lair</label>
+    <description>A Dragonian's lair</description>
+    <isPlayer>true</isPlayer>
+    <categoryTag>Tribal</categoryTag>
+    <pawnSingular>colonist</pawnSingular>
+    <pawnsPlural>colonists</pawnsPlural>
+    <basicMemberKind>Dragonian_Slave_Female</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+    </disallowedMemes>
+    <disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+    </disallowedPrecepts>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>DragonianStory</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Expanding/Village</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+    <geneticVariance>1</geneticVariance>
+    <forageabilityFactor>1.7</forageabilityFactor>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+  </FactionDef>
+</Defs>
