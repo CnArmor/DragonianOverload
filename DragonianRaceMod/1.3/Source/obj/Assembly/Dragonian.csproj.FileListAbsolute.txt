@@ -1,4 +1,0 @@
-D:\SteamLibrary\steamapps\common\RimWorld\Mods\Dragonian Overload\1.3\Source\bin\Assembly\Dragonian.dll
-D:\SteamLibrary\steamapps\common\RimWorld\Mods\Dragonian Overload\1.3\Source\obj\Assembly\Dragonian.csproj.AssemblyReference.cache
-D:\SteamLibrary\steamapps\common\RimWorld\Mods\Dragonian Overload\1.3\Source\obj\Assembly\Dragonian.csproj.CoreCompileInputs.cache
-D:\SteamLibrary\steamapps\common\RimWorld\Mods\Dragonian Overload\1.3\Source\obj\Assembly\Dragonian.dll
