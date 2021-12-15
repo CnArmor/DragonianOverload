@@ -1,69 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Linq;
-using System.Text;
 using RimWorld;
 using Verse;
 using Verse.AI;
-using Verse.Sound;
-using UnityEngine;
-using HarmonyLib;
-using System.Reflection.Emit;
-using RimWorld.Planet;
 
 namespace Dragonian
 {
-    public abstract class WorkGiver_GatherDragonianBodyResources : WorkGiver_Scanner
-    {
-        protected abstract JobDef JobDef { get; }
-
-        protected abstract CompHasGatherableBodyResource GetComp(Pawn animal);
-
-        public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
-        {
-            foreach (Pawn pawn2 in pawn.Map.mapPawns.FreeColonistsAndPrisonersSpawned)
-            {
-                if(pawn2.RaceProps.body == DragonianBodyDefOf.Dragonian)
-                {
-                    yield return pawn2;
-                }
-            }
-            yield break;
-        }
-
-        public override PathEndMode PathEndMode
-        {
-            get
-            {
-                return PathEndMode.Touch;
-            }
-        }
-
-        public override bool HasJobOnThing(Pawn pawn, Thing thing, bool forced = false)
-        {
-            Pawn pawn2 = thing as Pawn;
-            if (pawn2 == null || !pawn2.RaceProps.Humanlike)
-            {
-                return false;
-            }
-            CompHasGatherableBodyResource comp = GetComp(pawn2);
-            if (comp != null && comp.ActiveAndFull && PawnUtility.CanCasuallyInteractNow(pawn2, false, false, true) && pawn2 != pawn)
-            {
-                LocalTargetInfo localTargetInfo = pawn2;
-                if (ReservationUtility.CanReserve(pawn, localTargetInfo, 1, -1, null, forced))
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
-        {
-            return new Job(JobDef, t);
-        }
-    }
     public abstract class JobDriver_GatherDragonianBodyResources : JobDriver
     {
         private float gatherProgress;
@@ -137,7 +80,7 @@ namespace Dragonian
             yield break;
         }
     }
-    
+
     public class JobDriver_MilkDragonian : JobDriver_GatherDragonianBodyResources
     {
         protected override float WorkTotal
@@ -153,22 +96,7 @@ namespace Dragonian
             return animal.GetComp<CompMilkable>();
         }
     }
-    public class WorkGiver_MilkDragonian : WorkGiver_GatherDragonianBodyResources
-    {
-        protected override JobDef JobDef
-        {
-            get
-            {
-                return DragonianJobDefOf.MilkingDragonian;
-            }
-        }
 
-        protected override CompHasGatherableBodyResource GetComp(Pawn animal)
-        {
-            return ThingCompUtility.TryGetComp<CompMilkable>(animal);
-        }
-    }
-    
     public class JobDriver_ShearDragonian : JobDriver_GatherDragonianBodyResources
     {
         protected override float WorkTotal
@@ -184,20 +112,4 @@ namespace Dragonian
             return animal.GetComp<CompShearable>();
         }
     }
-    public class WorkGiver_ShearDragonian : WorkGiver_GatherDragonianBodyResources
-    {
-        protected override JobDef JobDef
-        {
-            get
-            {
-                return DragonianJobDefOf.ShearingDragonian;
-            }
-        }
-
-        protected override CompHasGatherableBodyResource GetComp(Pawn animal)
-        {
-            return ThingCompUtility.TryGetComp<CompShearable>(animal);
-        }
-    }
-
 }

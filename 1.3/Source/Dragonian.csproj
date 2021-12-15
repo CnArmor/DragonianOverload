@@ -52,15 +52,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JobDriver_SelfMilkDragonian.cs" />
+    <Compile Include="WorkGiver_SelfMilkDragonian.cs" />
     <Compile Include="DefModExtensions.cs" />
     <Compile Include="HarmonyPatch_DragonianInitial.cs" />
     <Compile Include="HarmonyPatch_MeleeAttack.cs" />
     <Compile Include="HarmonyPatch_WeaponRestriction.cs" />
+    <Compile Include="JobDriver_GatherDragonianBodyResources.cs" />
     <Compile Include="xObosolete_Comp_DragonianInitial.cs" />
     <Compile Include="HediffComp_AutoRecovery.cs" />
     <Compile Include="HediffComp_DragonbloodBurn.cs" />
     <Compile Include="HediffComp_DragonbloodOverload.cs" />
-    <Compile Include="MilkWool.cs" />
+    <Compile Include="WorkGiver_GatherDragonianBodyResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartupSetting.cs" />
   </ItemGroup>

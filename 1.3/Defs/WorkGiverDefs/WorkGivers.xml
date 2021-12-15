@@ -13,6 +13,7 @@
 			<li>Manipulation</li>
 		</requiredCapacities>
 	</WorkGiverDef>
+	
 	<WorkGiverDef>
 		<defName>ShearDragonian</defName>
 		<label>shear dragonian</label>
@@ -21,6 +22,19 @@
 		<verb>shear</verb>
 		<gerund>shearing</gerund>
 		<priorityInType>85</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>SelfMilkDragonian</defName>
+		<label>self-milk dragonian</label>
+		<giverClass>Dragonian.WorkGiver_SelfMilkDragonian</giverClass>
+		<workType>Handling</workType>
+		<verb>milk</verb>
+		<gerund>milking</gerund>
+		<priorityInType>90</priorityInType>
 		<requiredCapacities>
 			<li>Manipulation</li>
 		</requiredCapacities>

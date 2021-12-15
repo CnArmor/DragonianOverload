@@ -62,6 +62,7 @@ namespace Dragonian
     {
         public static JobDef MilkingDragonian;
         public static JobDef ShearingDragonian;
+        public static JobDef SelfMilkingDragonian;
     }
 
     [HarmonyPatch(typeof(ForbidUtility))]

@@ -6,11 +6,19 @@
 		<driverClass>Dragonian.JobDriver_MilkDragonian</driverClass>
 		<reportString>milking TargetA.</reportString>
 		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
-	</JobDef>  
+	</JobDef>
+	
 	<JobDef>
 		<defName>ShearingDragonian</defName>
 		<driverClass>Dragonian.JobDriver_ShearDragonian</driverClass>
 		<reportString>shearing TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+	<JobDef>
+		<defName>SelfMilkingDragonian</defName>
+		<driverClass>Dragonian.JobDriver_SelfMilkDragonian</driverClass>
+		<reportString>self milking</reportString>
 		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
 	</JobDef>
 
