@@ -1,5 +1,4 @@
 Todo:
-> see what I can do about work giver?
 > custom joining event?
 > apparel graphics for male dragonians
 > backstories
@@ -12,6 +11,7 @@ Todo:
 	- SoS2
 
 Finished:
+> Optimized work giver for an insignificant amount, added self-milking
 > Adjust weapon restrictions
 > Add unique ability to dragonians that syncs with auto recovery
 > Rewrite code for auto recovery

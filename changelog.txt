@@ -1,3 +1,8 @@
+0.4.0
+- Optimized Work Giver for an insignificant amount, but hey, an optimize is an optimize.
+
+- Added self-milking to dragonian. (le,lewd!)
+
 0.3.0
 - Patched dragonian weapon restriction. Now dragonians can equip all non-race-restricted melee weapons, even modded ones!
 	- This is done by patching HAR racce restriction and should theoretically work with all mods without needing furhter patching.
