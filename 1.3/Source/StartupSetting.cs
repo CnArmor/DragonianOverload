@@ -65,6 +65,17 @@ namespace Dragonian
         public static JobDef SelfMilkingDragonian;
     }
 
+    [DefOf]
+
+    public class DragonianEffecterDefOf
+    {
+        public static EffecterDef Dragonian_Effecter_Shy_north;
+        public static EffecterDef Dragonian_Effecter_Shy_south;
+        public static EffecterDef Dragonian_Effecter_Shy_east;
+        public static EffecterDef Dragonian_Effecter_Shy_west;
+        public static EffecterDef Dragonian_Effecter_Sweat;
+    }
+
     [HarmonyPatch(typeof(ForbidUtility))]
     [HarmonyPatch("SetForbidden")]
     public static class FobidPatch

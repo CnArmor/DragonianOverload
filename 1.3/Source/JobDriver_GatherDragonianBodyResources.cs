@@ -10,9 +10,6 @@ namespace Dragonian
     public abstract class JobDriver_GatherDragonianBodyResources : JobDriver
     {
         private float gatherProgress;
-
-        protected const TargetIndex AnimalInd = TargetIndex.A;
-
         protected abstract float WorkTotal { get; }
 
         protected abstract CompHasGatherableBodyResource GetComp(Pawn animal);

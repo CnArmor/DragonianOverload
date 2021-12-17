@@ -25,7 +25,7 @@ namespace Dragonian
 
         public override bool ShouldSkip(Pawn pawn, bool forced = false)
         {
-            if (pawn.def == DragonianRaceDefOf.Dragonian_Female && pawn.gender == Gender.Female)
+            if (pawn.def == DragonianRaceDefOf.Dragonian_Female)
                 return false;
             else
                 return true;
@@ -35,7 +35,7 @@ namespace Dragonian
         {
             if (base.HasJobOnThing(pawn, thing, forced) && pawn == thing)
             {
-                Log.Message("Found self milk target: " + pawn.Name);
+                //Log.Message("Found self milk target: " + pawn.Name);
                 return true;
             }
             return false;

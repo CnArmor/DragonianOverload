@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DragonianEffecter.cs" />
     <Compile Include="JobDriver_SelfMilkDragonian.cs" />
     <Compile Include="WorkGiver_SelfMilkDragonian.cs" />
     <Compile Include="DefModExtensions.cs" />

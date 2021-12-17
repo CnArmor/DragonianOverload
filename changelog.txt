@@ -1,3 +1,6 @@
+0.4.1
+- Added visual effect to self-milking.
+
 0.4.0
 - Optimized Work Giver for an insignificant amount, but hey, an optimize is an optimize.
 

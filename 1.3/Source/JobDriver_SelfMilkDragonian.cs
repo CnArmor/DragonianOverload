@@ -10,8 +10,8 @@ namespace Dragonian
     public class JobDriver_SelfMilkDragonian : JobDriver
     {
         private float gatherProgress;
-
         private float workTotal = 600f;
+        private DragonianEffecter de = new DragonianEffecter();
 
         public override void ExposeData()
         {
@@ -48,6 +48,8 @@ namespace Dragonian
             wait.FailOnDownedOrDead(TargetIndex.A);
             wait.FailOnNotCasualInterruptible(TargetIndex.A);
             wait.WithProgressBar(TargetIndex.A, () => gatherProgress / workTotal, false, -0.5f);
+            wait.WithEffect(de.DynamicShyEffectorDef(pawn), TargetIndex.A);
+            wait.WithEffect(DragonianEffecterDefOf.Dragonian_Effecter_Sweat, TargetIndex.A);
             
             yield return wait;
 
