@@ -363,8 +363,8 @@
 			<body>Dragonian</body>
 			<baseBodySize>0.8</baseBodySize>
 			<baseHealthScale>1.8</baseHealthScale>
-			<wildness>0.38</wildness>
-			<manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+			<wildness>0.85</wildness>
+			<manhunterOnDamageChance>2.00</manhunterOnDamageChance>
 			<foodType>VegetarianRoughAnimal,Fluid,AnimalProduct</foodType>
 			<gestationPeriodDays>35</gestationPeriodDays>
 			<litterSizeCurve>

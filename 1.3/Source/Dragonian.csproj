@@ -53,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DragonianEffecter.cs" />
+    <Compile Include="DragonianUtility.cs" />
+    <Compile Include="HarmonyPatch_Wildman.cs" />
+    <Compile Include="IncidentWorker_WildDragonianTribe.cs" />
     <Compile Include="JobDriver_SelfMilkDragonian.cs" />
     <Compile Include="WorkGiver_SelfMilkDragonian.cs" />
     <Compile Include="DefModExtensions.cs" />
@@ -60,7 +63,7 @@
     <Compile Include="HarmonyPatch_MeleeAttack.cs" />
     <Compile Include="HarmonyPatch_WeaponRestriction.cs" />
     <Compile Include="JobDriver_GatherDragonianBodyResources.cs" />
-    <Compile Include="xObosolete_Comp_DragonianInitial.cs" />
+    <Compile Include="xObsolete_Comp_DragonianInitial.cs" />
     <Compile Include="HediffComp_AutoRecovery.cs" />
     <Compile Include="HediffComp_DragonbloodBurn.cs" />
     <Compile Include="HediffComp_DragonbloodOverload.cs" />

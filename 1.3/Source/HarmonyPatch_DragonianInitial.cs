@@ -14,7 +14,7 @@ namespace Dragonian
         {
             if (__result != null)
             {
-                if (__result?.def == DragonianRaceDefOf.Dragonian_Female)
+                if (__result.IsDragonian())
                 {
                     __result.abilities?.GainAbility(DragonianAbilityDefOf.Dragonian_DragonbloodOverload);
                     if (!__result.health.hediffSet.hediffs.Any(hd => hd.def == DragonianHediffDefOf.Dragonian_AutoRecovery))
@@ -33,7 +33,7 @@ namespace Dragonian
         {
             if (Scribe.mode == LoadSaveMode.ResolvingCrossRefs)
             {
-                if (___pawn?.def == DragonianRaceDefOf.Dragonian_Female && !___pawn.abilities.abilities.Any(ab => ab.def == DragonianAbilityDefOf.Dragonian_DragonbloodOverload))
+                if (___pawn.IsDragonian() && !___pawn.abilities.abilities.Any(ab => ab.def == DragonianAbilityDefOf.Dragonian_DragonbloodOverload))
                 {
                     __instance.GainAbility(DragonianAbilityDefOf.Dragonian_DragonbloodOverload);
                 }

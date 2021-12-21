@@ -23,7 +23,7 @@ namespace Dragonian
             List<Pawn> potentialTargets = pawn.Map.mapPawns.FreeColonistsAndPrisonersSpawned;
             foreach (Pawn target in potentialTargets)
             {
-                if (target.def == DragonianRaceDefOf.Dragonian_Female)
+                if (target.IsDragonian())
                     return false;
             }
             return true;
@@ -40,7 +40,7 @@ namespace Dragonian
         public override bool HasJobOnThing(Pawn pawn, Thing thing, bool forced = false)
         {
             Pawn targetPawn = thing as Pawn;
-            if (targetPawn == null || targetPawn.def != DragonianRaceDefOf.Dragonian_Female)
+            if (targetPawn == null || !targetPawn.IsDragonian())
             {
                 return false;
             }

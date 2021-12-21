@@ -25,7 +25,7 @@ namespace Dragonian
 
         public override bool ShouldSkip(Pawn pawn, bool forced = false)
         {
-            if (pawn.def == DragonianRaceDefOf.Dragonian_Female)
+            if (pawn.IsDragonian())
                 return false;
             else
                 return true;

@@ -45,8 +45,9 @@
 		<combatPower>60</combatPower>
 		<itemQuality>Poor</itemQuality>
 		<race>Dragonian_Female</race>
+		<acceptArrestChanceFactor>0.5</acceptArrestChanceFactor>
 		<initialWillRange>3~5</initialWillRange>
-		<initialResistanceRange>6~10</initialResistanceRange>
+		<initialResistanceRange>30~47</initialResistanceRange>
 		<backstoryFiltersOverride>
 			<li>
 				<categories>

@@ -1,5 +1,5 @@
 Todo:
-> custom joining event?
+> AI for using ability?
 > apparel graphics for male dragonians
 > backstories
 > scenario
@@ -11,6 +11,7 @@ Todo:
 	- SoS2
 
 Finished:
+> Wild dragonian tribe event
 > Optimized work giver for an insignificant amount, added self-milking
 > Adjust weapon restrictions
 > Add unique ability to dragonians that syncs with auto recovery

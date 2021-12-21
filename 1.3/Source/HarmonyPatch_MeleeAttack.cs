@@ -12,7 +12,7 @@ namespace Dragonian
         [HarmonyPostfix]
         private static void Postfix(ref float __result, Pawn attacker)
         {
-            if (attacker.def == DragonianRaceDefOf.Dragonian_Female
+            if (attacker.IsDragonian()
                 && attacker.health.hediffSet.hediffs.Any(hd => hd.def == DragonianHediffDefOf.Dragonian_DragonbloodOverload))
             {
                 __result = __result * DragonianHediffDefOf.Dragonian_DragonbloodOverload.GetModExtension<MeleeModifier>().meleeDamageMultiplier;
@@ -27,7 +27,7 @@ namespace Dragonian
         [HarmonyPostfix]
         private static void Postfix(ref float __result, Pawn attacker)
         {
-            if (attacker.def == DragonianRaceDefOf.Dragonian_Female
+            if (attacker.IsDragonian()
                 && attacker.health.hediffSet.hediffs.Any(hd => hd.def == DragonianHediffDefOf.Dragonian_DragonbloodOverload))
             {
                 __result = __result * DragonianHediffDefOf.Dragonian_DragonbloodOverload.GetModExtension<MeleeModifier>().meleeDamageMultiplier;
@@ -42,7 +42,7 @@ namespace Dragonian
         [HarmonyPostfix]
         private static void Postfix(ref float __result, ref VerbProperties __instance, Pawn attacker)
         {
-            if (__instance.IsMeleeAttack && attacker.def == DragonianRaceDefOf.Dragonian_Female 
+            if (__instance.IsMeleeAttack && attacker.IsDragonian() 
                 && attacker.health.hediffSet.hediffs.Any(hd => hd.def == DragonianHediffDefOf.Dragonian_DragonbloodOverload))
             {
                 __result = __result * DragonianHediffDefOf.Dragonian_DragonbloodOverload.GetModExtension<MeleeModifier>().meleeCooldownMultiplier;
@@ -57,7 +57,7 @@ namespace Dragonian
         //patches bare hand melee cooldown
         private static void Postfix(ref float __result, ref VerbProperties __instance, Pawn attacker)
         {
-            if (__instance.IsMeleeAttack && attacker.def == DragonianRaceDefOf.Dragonian_Female
+            if (__instance.IsMeleeAttack && attacker.IsDragonian()
                 && attacker.health.hediffSet.hediffs.Any(hd => hd.def == DragonianHediffDefOf.Dragonian_DragonbloodOverload))
             {
                 __result = __result * DragonianHediffDefOf.Dragonian_DragonbloodOverload.GetModExtension<MeleeModifier>().meleeCooldownMultiplier;

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationInsert">
+		<xpath>Defs/ThinkTreeDef[defName="Humanlike"]/thinkRoot[@Class="ThinkNode_Priority"]/subNodes/li[insertTag="Humanlike_PostMain"]</xpath>
+		<value>
+			<!--wild dragonian core-->
+			<li Class="ThinkNode_ConditionalPawnKind">
+				<pawnKind>Dragonian_Female</pawnKind>
+				<subNodes>
+					<li Class="ThinkNode_Subtree">
+						<treeDef>Dragonian_MainWildDragonianBehaviorCore</treeDef>
+						<leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
+					</li>
+				</subNodes>
+			</li>
+			<!--wild dragonian idle-->
+			<li Class="ThinkNode_ConditionalPawnKind">
+				<pawnKind>Dragonian_Female</pawnKind>
+				<subNodes>
+					<li Class="ThinkNode_Tagger">
+						<tagToGive>Idle</tagToGive>
+						<subNodes>
+							<!-- Wander -->
+							<li Class="JobGiver_WanderAnywhere">
+								<maxDanger>Deadly</maxDanger>
+								<ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
+							</li>
+						</subNodes>
+					</li>
+				</subNodes>
+			</li>
+		</value>
+	</Operation>
+</Patch>

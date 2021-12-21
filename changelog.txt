@@ -1,3 +1,14 @@
+0.5.0
+- Attempted to add wild dragonian tribe event.
+
+- Various fix for wild dragonian to get rid of the hardcoded vanilla wildman function
+	- Wild dragonians are slightly different from wildmen. They don't randomly drop their cloth, and don't hunt random animals.
+	- 50% manhunting chance on being damaged, 85% wildness, won't become manhunting on tame fail.
+
+- Adjusted dragonian race stat:
+	- manHunterOnDamageChance: 1.0 -> 2.0
+	- wildness: 0.38 -> 0.85
+
 0.4.1
 - Added visual effect to self-milking.
 

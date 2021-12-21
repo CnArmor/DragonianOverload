@@ -2,38 +2,50 @@
 using RimWorld;
 using Verse;
 using HarmonyLib;
+using System;
 
 namespace Dragonian
 {
     [StaticConstructorOnStartup]
 
-    public static class Startup
+    public static class HarmonyPatches
     {
         //must have for Harmony to actually patch things
-        static Startup()
+        private static readonly Type patchType = typeof(HarmonyPatches);
+        static HarmonyPatches()
         {
             Harmony harmony = new Harmony("Dragonian");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
+            harmony.Patch(AccessTools.Method(typeof(InteractionWorker_RecruitAttempt), "DoRecruit", new[] { typeof(Pawn), typeof(Pawn), typeof(string).MakeByRefType(), typeof(string).MakeByRefType(), typeof(bool), typeof(bool) }),
+                postfix: new HarmonyMethod(patchType, nameof(Patch_InteractionWorker_RecruitAttempt)));
+        }
+        public static void Patch_InteractionWorker_RecruitAttempt(ref Pawn recruitee) //on successfully recruiting wild dragonians, change the pawnkind so they no longer have wild properties
+        {
+            if (recruitee.IsWildDragonian())
+            {
+                //Log.Message(recruitee.Name+"");
+                recruitee.kindDef = DragonianPawnKindDefOf.Dragonian_Slave_Female;
+            }
         }
     }
 
     [DefOf]
-
     public class DragonianRaceDefOf
     {
         public static ThingDef Dragonian_Female;
     }
-
-    
+ 
     [DefOf]
     public class DragonianBodyDefOf
     {
         public static BodyDef Dragonian;
     }
+
     [DefOf]
     public class DragonianPawnKindDefOf
     {
         public static PawnKindDef Dragonian_Female;
+        public static PawnKindDef Dragonian_Slave_Female;
     }
 
     [DefOf]
@@ -51,7 +63,6 @@ namespace Dragonian
     }
 
     [DefOf]
-
     public class DragonianDamageDefOf
     {
         public static DamageDef Dragonian_DragonbloodBurn;
@@ -66,7 +77,6 @@ namespace Dragonian
     }
 
     [DefOf]
-
     public class DragonianEffecterDefOf
     {
         public static EffecterDef Dragonian_Effecter_Shy_north;
@@ -74,6 +84,12 @@ namespace Dragonian
         public static EffecterDef Dragonian_Effecter_Shy_east;
         public static EffecterDef Dragonian_Effecter_Shy_west;
         public static EffecterDef Dragonian_Effecter_Sweat;
+    }
+
+    [DefOf]
+    public class DragonianFactionDefOf
+    {
+        public static FactionDef Dragonians_Hidden;
     }
 
     [HarmonyPatch(typeof(ForbidUtility))]

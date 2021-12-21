@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<IncidentDef>
+		<defName>WildDragonianTribe</defName>
+		<label>wild dragonian tribe wanders in</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>Dragonian.IncidentWorker_WildDragonianTribe</workerClass>
+		<baseChance>1.0</baseChance>
+		<minRefireDays>60</minRefireDays>
+		<letterLabel>wild dragonian tribe wanders in</letterLabel>
+		<letterText>A small tribe of wild dragonians have wandered into the area. They will probably leave after a few days. \n\nYou can attempt to tame or arrest them, but be careful, as angered dragonians can cause massive devastations.</letterText>
+		<letterDef>NeutralEvent</letterDef>
+	</IncidentDef>
+</Defs>
