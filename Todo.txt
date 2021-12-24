@@ -10,7 +10,7 @@ Todo:
 	- SoS2
 
 Finished:
-> Pseudo AI to apply ability effect for npc in combat
+> Pseudo AI to apply ability effect for npc dragonians in combat
 > Wild dragonian tribe event
 > Optimized work giver for an insignificant amount, added self-milking
 > Adjust weapon restrictions
