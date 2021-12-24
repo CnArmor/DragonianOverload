@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DutyDef>
+		<defName>Dragonian_WildWanderNearPoint</defName>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="ThinkNode_SubTree">
+					<treeDef>Dragonian_MainWildDragonianBehaviorCore</treeDef>
+				</li>
+				<li Class="ThinkNode_ConditionalRandom">
+				  <chance>0.1</chance>
+				  <subNodes>
+					<li Class="JobGiver_Dance">
+						<ticksRange>750~1250</ticksRange>
+					</li>
+				  </subNodes>
+				</li>
+				<li Class="JobGiver_WanderNearDutyLocation">
+					<wanderRadius>6</wanderRadius>
+				</li>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+</Defs>

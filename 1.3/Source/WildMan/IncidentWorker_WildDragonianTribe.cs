@@ -4,6 +4,7 @@ using System.Linq;
 using RimWorld;
 using Verse;
 using Verse.AI;
+using Verse.AI.Group;
 
 namespace Dragonian
 {
@@ -20,7 +21,6 @@ namespace Dragonian
             IntVec3 intVec;
             return !map.GameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout) && map.mapTemperature.SeasonAcceptableFor(DragonianRaceDefOf.Dragonian_Female) && this.TryFindEntryCell(map, out intVec);
         }
-
 		protected override bool TryExecuteWorker(IncidentParms parms)
 		{
 			Map map = (Map)parms.target;
@@ -31,20 +31,31 @@ namespace Dragonian
 				return false;
 			}
 
-            int spawnNumber = Rand.RangeInclusive(2, 5);
-            int stayTime = Rand.RangeInclusive(5000, 7500);//3~7days
+            IntVec3 gatherSpot; 
+            RCellFinder.TryFindRandomCellOutsideColonyNearTheCenterOfTheMap(loc, map, 10f, out gatherSpot);
+            if (gatherSpot == null)
+                gatherSpot = CellFinder.RandomNotEdgeCell((int)Math.Round(map.Size.x * 0.25), map);
 
-            Pawn pawn = null;
+            int stayTime = Rand.RangeInclusive(180000, 300000);//3~5days
+
+            List<Pawn> pawnList = new List<Pawn>();
+
+            int spawnNumber = Rand.RangeInclusive(2, 5);
+
+            Pawn pawn;
 
             for(int i = 0; i < spawnNumber; i++)
             {
+                IntVec3 spawnLoc = CellFinder.RandomClosewalkCellNear(loc, map, 5, null);
                 pawn = PawnGenerator.GeneratePawn(DragonianPawnKindDefOf.Dragonian_Female, Find.FactionManager.FirstFactionOfDef(DragonianFactionDefOf.Dragonians_Hidden));
                 pawn.SetFaction(null, null);
-                GenSpawn.Spawn(pawn, loc, map, WipeMode.Vanish);
-                pawn.mindState.exitMapAfterTick = Find.TickManager.TicksGame + stayTime;
+                GenSpawn.Spawn(pawn, spawnLoc, map, WipeMode.Vanish);
+                pawnList.Add(pawn);
             }
 
-            base.SendStandardLetter(this.def.letterLabel, this.def.letterText, this.def.letterDef, parms, pawn, Array.Empty<NamedArgument>());
+            LordMaker.MakeNewLord(null, new LordJob_WildDragonianTribe(gatherSpot, stayTime), map, pawnList);
+
+            base.SendStandardLetter(this.def.letterLabel, this.def.letterText, this.def.letterDef, parms, pawnList, Array.Empty<NamedArgument>());
             return true;
 		}
         private bool TryFindEntryCell(Map map, out IntVec3 cell)

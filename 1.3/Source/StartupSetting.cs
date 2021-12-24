@@ -3,6 +3,7 @@ using RimWorld;
 using Verse;
 using HarmonyLib;
 using System;
+using Verse.AI;
 
 namespace Dragonian
 {
@@ -90,6 +91,19 @@ namespace Dragonian
     public class DragonianFactionDefOf
     {
         public static FactionDef Dragonians_Hidden;
+    }
+
+    [DefOf]
+    public class DragonianDutyDefOf
+    {
+        public static DutyDef Dragonian_WildWanderNearPoint;
+    }
+
+    [DefOf]
+    public class DragonianThingDefOf
+    {
+        public static ThingDef DragonianMilk;
+        public static ThingDef WoolDragonian;
     }
 
     [HarmonyPatch(typeof(ForbidUtility))]

@@ -52,22 +52,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WildMan\LordJob_WildDragonianTribe.cs" />
     <Compile Include="DragonianEffecter.cs" />
     <Compile Include="DragonianUtility.cs" />
-    <Compile Include="HarmonyPatch_Wildman.cs" />
-    <Compile Include="IncidentWorker_WildDragonianTribe.cs" />
-    <Compile Include="JobDriver_SelfMilkDragonian.cs" />
-    <Compile Include="WorkGiver_SelfMilkDragonian.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_Wildman.cs" />
+    <Compile Include="WildMan\IncidentWorker_WildDragonianTribe.cs" />
+    <Compile Include="JobWork\JobDriver_SelfMilkDragonian.cs" />
+    <Compile Include="WildMan\LordToil_WildDragonianGather.cs" />
+    <Compile Include="JobWork\WorkGiver_SelfMilkDragonian.cs" />
     <Compile Include="DefModExtensions.cs" />
-    <Compile Include="HarmonyPatch_DragonianInitial.cs" />
-    <Compile Include="HarmonyPatch_MeleeAttack.cs" />
-    <Compile Include="HarmonyPatch_WeaponRestriction.cs" />
-    <Compile Include="JobDriver_GatherDragonianBodyResources.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_DragonianInitial.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_MeleeAttack.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_WeaponRestriction.cs" />
+    <Compile Include="JobWork\JobDriver_GatherDragonianBodyResources.cs" />
+    <Compile Include="WildMan\TransitionActions.cs" />
     <Compile Include="xObsolete_Comp_DragonianInitial.cs" />
-    <Compile Include="HediffComp_AutoRecovery.cs" />
-    <Compile Include="HediffComp_DragonbloodBurn.cs" />
-    <Compile Include="HediffComp_DragonbloodOverload.cs" />
-    <Compile Include="WorkGiver_GatherDragonianBodyResources.cs" />
+    <Compile Include="Hediff\HediffComp_AutoRecovery.cs" />
+    <Compile Include="Hediff\HediffComp_DragonbloodBurn.cs" />
+    <Compile Include="Hediff\HediffComp_DragonbloodOverload.cs" />
+    <Compile Include="JobWork\WorkGiver_GatherDragonianBodyResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartupSetting.cs" />
   </ItemGroup>

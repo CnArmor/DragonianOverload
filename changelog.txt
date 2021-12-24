@@ -1,3 +1,13 @@
+0.5.1
+- Fully flesh out wild dragonian tribe event. They now act a lot more interestingly than normal wildman.
+	- Go to a spot near the center of the map outside of your colony to gather. If no such spot exists then will generally gather towards the center of the map.
+	- Randomly wander around near the gather spot and occasionally perform dance.
+	- Leave after a few days or facing bad temperatures.
+	- Try to break out and run when encaged.
+	- Chance to all go mad when harmed.
+	- Flee when suffering casualty.
+	- However if damaged during flee will have chance to individually go mad again and fight until downed.
+
 0.5.0
 - Attempted to add wild dragonian tribe event.
 
