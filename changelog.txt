@@ -1,3 +1,6 @@
+0.5.2
+- Added a pseudo AI that let npc dragonians enter dragonblood overload state in combat.
+
 0.5.1
 - Fully flesh out wild dragonian tribe event. They now act a lot more interestingly than normal wildman.
 	- Go to a spot near the center of the map outside of your colony to gather. If no such spot exists then will generally gather towards the center of the map.

@@ -75,6 +75,7 @@ namespace Dragonian
         public static JobDef MilkingDragonian;
         public static JobDef ShearingDragonian;
         public static JobDef SelfMilkingDragonian;
+        public static JobDef DragonianFakeCast;
     }
 
     [DefOf]
@@ -104,6 +105,12 @@ namespace Dragonian
     {
         public static ThingDef DragonianMilk;
         public static ThingDef WoolDragonian;
+    }
+
+    [DefOf]
+    public class DragonianSoundDefOf
+    {
+        public static SoundDef Dragonian_Ability;
     }
 
     [HarmonyPatch(typeof(ForbidUtility))]

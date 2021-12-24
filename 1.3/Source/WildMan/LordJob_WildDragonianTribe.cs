@@ -13,14 +13,11 @@ namespace Dragonian
         public LordJob_WildDragonianTribe()
         {
         }
-        public LordJob_WildDragonianTribe(IntVec3 gatherSpot, int stayDuration)
+        public LordJob_WildDragonianTribe(IntVec3 gatherSpot, int stayDuration, int casualtyBeforeRun)
         {
             this.gatherSpot = gatherSpot;
             this.stayDuration = stayDuration;
-            if (lord.ownedPawns.Count >= 4)
-                casualtyBeforeRun = 2;
-            else
-                casualtyBeforeRun = 1;
+            this.casualtyBeforeRun = casualtyBeforeRun;
         }
         public override StateGraph CreateGraph()
         {

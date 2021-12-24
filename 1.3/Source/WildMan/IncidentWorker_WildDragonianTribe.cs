@@ -32,8 +32,7 @@ namespace Dragonian
 			}
 
             IntVec3 gatherSpot; 
-            RCellFinder.TryFindRandomCellOutsideColonyNearTheCenterOfTheMap(loc, map, 10f, out gatherSpot);
-            if (gatherSpot == null)
+            if (!RCellFinder.TryFindRandomCellOutsideColonyNearTheCenterOfTheMap(loc, map, 10f, out gatherSpot))
                 gatherSpot = CellFinder.RandomNotEdgeCell((int)Math.Round(map.Size.x * 0.25), map);
 
             int stayTime = Rand.RangeInclusive(180000, 300000);//3~5days
@@ -41,6 +40,9 @@ namespace Dragonian
             List<Pawn> pawnList = new List<Pawn>();
 
             int spawnNumber = Rand.RangeInclusive(2, 5);
+            int casualtyBeforeRun = (int)Math.Round(spawnNumber * 0.4);
+
+            //Log.Message("Trying to spawn, spawn number: " + spawnNumber + ", casualty: " + casualtyBeforeRun + ", stay time: " + stayTime);
 
             Pawn pawn;
 
@@ -53,7 +55,7 @@ namespace Dragonian
                 pawnList.Add(pawn);
             }
 
-            LordMaker.MakeNewLord(null, new LordJob_WildDragonianTribe(gatherSpot, stayTime), map, pawnList);
+            LordMaker.MakeNewLord(null, new LordJob_WildDragonianTribe(gatherSpot, stayTime, casualtyBeforeRun), map, pawnList);
 
             base.SendStandardLetter(this.def.letterLabel, this.def.letterText, this.def.letterDef, parms, pawnList, Array.Empty<NamedArgument>());
             return true;

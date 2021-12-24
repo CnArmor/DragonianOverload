@@ -17,6 +17,7 @@
 		<statBases>
 			<Ability_Duration>167</Ability_Duration>	<!-- in second. 1 second = 60 ticks, 2500 ticks = 1 in game hour, 41.67 seconds = 1 in game hour -->
 		</statBases>
+		<cooldownTicksRange>60000</cooldownTicksRange>
 		<stunTargetWhileCasting>False</stunTargetWhileCasting>
 		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>

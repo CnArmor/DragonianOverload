@@ -52,6 +52,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HarmonyPatches\HarmonyPatch_AIDragonianAbility.cs" />
+    <Compile Include="JobWork\JobDriver_FakeCastAbility.cs" />
     <Compile Include="WildMan\LordJob_WildDragonianTribe.cs" />
     <Compile Include="DragonianEffecter.cs" />
     <Compile Include="DragonianUtility.cs" />

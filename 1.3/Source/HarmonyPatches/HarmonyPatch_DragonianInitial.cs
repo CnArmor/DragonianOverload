@@ -24,7 +24,7 @@ namespace Dragonian
         }
     }
 
-    // For backward compatiblity
+    // Backward compatiblity
     [HarmonyPatch(typeof(Pawn_AbilityTracker), "ExposeData")]
     public static class Patch_Pawn_AbilityTracker
     {
