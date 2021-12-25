@@ -10,7 +10,7 @@ namespace Dragonian
     public static class Patch_PawnGenerator
     {
         [HarmonyPostfix]
-        static void Postfix(ref Pawn __result)
+        static void PawnGeneratorPostfix(ref Pawn __result)
         {
             if (__result != null)
             {
@@ -29,7 +29,7 @@ namespace Dragonian
     public static class Patch_Pawn_AbilityTracker
     {
         [HarmonyPostfix]
-        static void Postfix(ref Pawn_AbilityTracker __instance, ref Pawn ___pawn)
+        static void Pawn_AbilityTrackerPostfix(ref Pawn_AbilityTracker __instance, ref Pawn ___pawn)
         {
             if (Scribe.mode == LoadSaveMode.ResolvingCrossRefs)
             {

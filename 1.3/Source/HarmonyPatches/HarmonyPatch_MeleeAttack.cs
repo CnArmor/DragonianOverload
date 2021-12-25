@@ -10,7 +10,7 @@ namespace Dragonian
     {
         //patches equipment melee damage
         [HarmonyPostfix]
-        private static void Postfix(ref float __result, Pawn attacker)
+        private static void VerbProperties_AdjustedEquipmentMeleeDamageAmountPostfix(ref float __result, Pawn attacker)
         {
             if (attacker.IsDragonian()
                 && attacker.health.hediffSet.hediffs.Any(hd => hd.def == DragonianHediffDefOf.Dragonian_DragonbloodOverload))
@@ -25,7 +25,7 @@ namespace Dragonian
     {
         //patches barehand melee damage
         [HarmonyPostfix]
-        private static void Postfix(ref float __result, Pawn attacker)
+        private static void VerbProperties_AdjustedBarehandMeleeDamageAmountPostfix(ref float __result, Pawn attacker)
         {
             if (attacker.IsDragonian()
                 && attacker.health.hediffSet.hediffs.Any(hd => hd.def == DragonianHediffDefOf.Dragonian_DragonbloodOverload))
@@ -40,7 +40,7 @@ namespace Dragonian
     {
         //patches equipment melee cooldown
         [HarmonyPostfix]
-        private static void Postfix(ref float __result, ref VerbProperties __instance, Pawn attacker)
+        private static void VerbProperties_AdjustedEquipmentMeleeCooldownPostfix(ref float __result, ref VerbProperties __instance, Pawn attacker)
         {
             if (__instance.IsMeleeAttack && attacker.IsDragonian() 
                 && attacker.health.hediffSet.hediffs.Any(hd => hd.def == DragonianHediffDefOf.Dragonian_DragonbloodOverload))
@@ -55,7 +55,7 @@ namespace Dragonian
     {
         [HarmonyPostfix]
         //patches bare hand melee cooldown
-        private static void Postfix(ref float __result, ref VerbProperties __instance, Pawn attacker)
+        private static void VerbProperties_AdjustedBarehandMeleeCooldownPostfix(ref float __result, ref VerbProperties __instance, Pawn attacker)
         {
             if (__instance.IsMeleeAttack && attacker.IsDragonian()
                 && attacker.health.hediffSet.hediffs.Any(hd => hd.def == DragonianHediffDefOf.Dragonian_DragonbloodOverload))

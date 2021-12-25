@@ -9,7 +9,7 @@ namespace Dragonian
     public class Patch_JobGiver_Manhunter
     {
         [HarmonyPostfix]
-        private static void Postfix(ref Job __result, ref Pawn pawn)
+        private static void JobGiver_ManhunterPostfix(ref Job __result, ref Pawn pawn)
         {
             //Log.Message("interferecing, pawn name:" + pawn.Name);
             //Log.Message("Ability CD: " + pawn.abilities.GetAbility(DragonianAbilityDefOf.Dragonian_DragonbloodOverload).CooldownTicksRemaining);
@@ -30,7 +30,7 @@ namespace Dragonian
     public class Patch_JobGiver_AIFightEnemy
     {
         [HarmonyPostfix]
-        private static void Postfix(ref Job __result, ref Pawn pawn)
+        private static void JobGiver_AIFightEnemyPostfix(ref Job __result, ref Pawn pawn)
         {
             Thing enemyTarget = pawn.mindState.enemyTarget;
             Pawn targetPawn = enemyTarget as Pawn;

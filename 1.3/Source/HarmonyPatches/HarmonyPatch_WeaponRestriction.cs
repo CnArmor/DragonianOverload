@@ -8,7 +8,7 @@ namespace Dragonian
     public class Patch_RaceRestrictionSettings
     {
         [HarmonyPostfix]
-        private static void Postfix(ref bool __result, ThingDef weapon, ThingDef race)
+        private static void RaceRestrictionSettingsPostfix(ref bool __result, ThingDef weapon, ThingDef race)
         {
             if (race == DragonianRaceDefOf.Dragonian_Female && weapon.IsMeleeWeapon)
                 __result = true;
