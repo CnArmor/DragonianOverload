@@ -43,7 +43,7 @@ namespace Dragonian
         private static void VerbProperties_AdjustedEquipmentMeleeCooldownPostfix(ref float __result, ref VerbProperties __instance, Pawn attacker)
         {
             if (__instance.IsMeleeAttack && attacker.IsDragonian() 
-                && attacker.health.hediffSet.hediffs.Any(hd => hd.def == DragonianHediffDefOf.Dragonian_DragonbloodOverload))
+                && attacker.health.hediffSet.HasHediff(DragonianHediffDefOf.Dragonian_DragonbloodOverload))
             {
                 __result = __result * DragonianHediffDefOf.Dragonian_DragonbloodOverload.GetModExtension<MeleeModifier>().meleeCooldownMultiplier;
             }
@@ -58,7 +58,7 @@ namespace Dragonian
         private static void VerbProperties_AdjustedBarehandMeleeCooldownPostfix(ref float __result, ref VerbProperties __instance, Pawn attacker)
         {
             if (__instance.IsMeleeAttack && attacker.IsDragonian()
-                && attacker.health.hediffSet.hediffs.Any(hd => hd.def == DragonianHediffDefOf.Dragonian_DragonbloodOverload))
+                && attacker.health.hediffSet.HasHediff(DragonianHediffDefOf.Dragonian_DragonbloodOverload))
             {
                 __result = __result * DragonianHediffDefOf.Dragonian_DragonbloodOverload.GetModExtension<MeleeModifier>().meleeCooldownMultiplier;
             }

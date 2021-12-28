@@ -2,9 +2,12 @@
 <Defs>
 
 	<AlienRace.BackstoryDef Name="Dragonian_Base" Abstract="True">
-		<forcedHediffs>
-			<li>Dragonian_AutoRecovery</li>
-		</forcedHediffs>    
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>-8</amount>
+			</li>
+		</skillGains>
 	</AlienRace.BackstoryDef>
 
 
@@ -15,15 +18,11 @@
 
 	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
 		<defName>Dragonian_WildChild</defName>
-		<title>Dragonian wild born</title>
-		<titleShort>wild born</titleShort>
-		<baseDescription>[PAWN_nameDef] is wild dragonian.</baseDescription>
+		<title>First dragonian wild born</title>
+		<titleShort>first dragonian</titleShort>
+		<baseDescription>[PAWN_nameDef] is among the first dragonians found in the wild.</baseDescription>
 		<slot>Childhood</slot>
 		<skillGains>
-			<li>
-				<defName>Shooting</defName>
-				<amount>-8</amount>
-			</li>
 			<li>
 				<defName>Melee</defName>
 				<amount>4</amount>
@@ -53,21 +52,17 @@
 			<li>Crafting</li>
 		</workDisables>
 		<spawnCategories>
-			<li>DragonianStory</li>
+			<li>DragonianLegacy</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
 		<defName>Dragonian_Wild</defName>
-		<title>Wild Dragonian</title>
-		<titleShort>Wild Dragonian</titleShort>
-		<baseDescription>[PAWN_nameDef] is wild dragonian</baseDescription>
+		<title>First dragonian</title>
+		<titleShort>first dragonian</titleShort>
+		<baseDescription>[PAWN_nameDef] is among the first dragonians found in the wild.</baseDescription>
 		<slot>Adulthood</slot>
 		<skillGains>
-			<li>
-				<defName>Shooting</defName>
-				<amount>-8</amount>
-			</li>
 			<li>
 				<defName>Construction</defName>
 				<amount>-8</amount>
@@ -97,22 +92,17 @@
 			<li>Crafting</li>
 		</workDisables>
 		<spawnCategories>
-			<li>DragonianStory</li>
-			<li>DragonianWild</li>
+			<li>DragonianLegacy</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
 		<defName>Dragonian_SlaveChild</defName>
-		<title>Abandoned Dragonian</title>
-		<titleShort>abandoned</titleShort>
-		<baseDescription>[PAWN_nameDef] is a dragonian raised by human hands.</baseDescription>
+		<title>Original dragonian</title>
+		<titleShort>original dragonian</titleShort>
+		<baseDescription>[PAWN_nameDef] is one of the fisrt dragonians raised by human hands.</baseDescription>
 		<slot>Childhood</slot>
 		<skillGains>
-			<li>
-				<defName>Shooting</defName>
-				<amount>-8</amount>
-			</li>
 			<li>
 				<defName>Melee</defName>
 				<amount>4</amount>
@@ -142,21 +132,17 @@
 			<li>Crafting</li>
 		</workDisables>
 		<spawnCategories>
-			<li>DragonianStory</li>
+			<li>DragonianLegacy</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
 		<defName>Dragonian_Slave</defName>
-		<title>Abandoned Dragonian</title>
-		<titleShort>abandoned</titleShort>
-		<baseDescription>[PAWN_nameDef] is a dragonian raised by human hands.</baseDescription>
+		<title>Original dragonian</title>
+		<titleShort>original dragonian</titleShort>
+		<baseDescription>[PAWN_nameDef] is one of the fisrt dragonians raised by human hands.</baseDescription>
 		<slot>Adulthood</slot>
 		<skillGains>
-			<li>
-				<defName>Shooting</defName>
-				<amount>-8</amount>
-			</li>
 			<li>
 				<defName>Melee</defName>
 				<amount>4</amount>
@@ -186,10 +172,440 @@
 			<li>Crafting</li>
 		</workDisables>
 		<spawnCategories>
-			<li>DragonianStory</li>
-			<li>DragonianSlave</li>
+			<li>DragonianLegacy</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
 	
 	
+	
+	<!--		Childhood		-->
+	
+	<!--		Wild & Tribal		-->
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Carefree_Wildborn</defName>
+		<title>Dragonian carefree wild born</title>
+		<titleShort>carefree child</titleShort>
+		<baseDescription>[PAWN_nameDef] was raised in the wild. \n\nBeing carefree in the nature, [PAWN_nameDef] learned how to pick wild fruits and communicate with animals.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Cooking</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Intellectual</li>
+			<li>Crafting</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Brave_Wildborn</defName>
+		<title>Dragonian brave wild born</title>
+		<titleShort>brave child</titleShort>
+		<baseDescription>[PAWN_nameDef] was raised in the wild. \n\n[PAWN_nameDef] was a brave child and took many adventures the others wouldn't dare to.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Medicine</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Cooking</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Intellectual</li>
+			<li>Artistic</li>
+			<li>Crafting</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Caring_Wildborn</defName>
+		<title>Dragonian caring wild born</title>
+		<titleShort>caring child</titleShort>
+		<baseDescription>[PAWN_nameDef] was raised in the wild. \n\nBeing very sympathetic and caring, [PAWN_nameDef] helped others when in need, and benefited from all the helping experiences.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Medicine</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Cooking</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>1</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Intellectual</li>
+			<li>Crafting</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+		<forcedTraits>
+			<li>
+				<defName>Kind</defName>
+				<chance>25</chance>
+			</li>
+		</forcedTraits>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Shaman_Apprentice</defName>
+		<title>Dragonian shaman apprentice</title>
+		<titleShort>shaman apprentice</titleShort>
+		<baseDescription>[PAWN_nameDef] was raised in the wild. \n\nBeing smarter than other children, [PAWN_nameDef] was taught various knowledge to become a shaman of the tribe one day.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Medicine</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Cooking</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>2</amount>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Abandoned_Child</defName>
+		<title>Dragonian abandoned child</title>
+		<titleShort>abandoned child</titleShort>
+		<baseDescription>[PAWN_nameDef] was abondoned in the wild, then adopted by a local tribe. \n\n[PAWN_nameDef] possesses knowledge of (comparabily) advanced cooking and crafting skills rarely known to the tribe.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Crafting</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Cooking</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>-1</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Intellectual</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Cave_Child</defName>
+		<title>Dragonian cave child</title>
+		<titleShort>cave child</titleShort>
+		<baseDescription>[PAWN_nameDef] was raised in the wild, in a tribe living in the caves. \n\n[PAWN_nameDef] spent most of [PAWN_possessive] childhood looking for shiny rocks and tending mushrooms. [PAWN_pronoun] also learned to fight insectoids when the need arise.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Cooking</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>-1</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Intellectual</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<!--		Civil & Spacer		-->
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_VatGrown_Child</defName>
+		<title>Dragonian vat-grown child</title>
+		<titleShort>vat-grown child</titleShort>
+		<baseDescription>Given birth by an artifical womb, grown at an accelerated rate inside a vat, [PAWN_nameDef] was made for a sole purpose: to be sold to a client. \n\nDragonians like [PAWN_nameDef] were gene-tailored to be stronger, more charming, and brain-washed to become obidient. They are often sold to military or slavers, only very few lucky ones are able to avoid such destiny.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Crafting</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Medicine</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Cooking</defName>
+				<amount>-4</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Intellectual</li>
+		</workDisables>
+		<forcedTraits>
+			<li>
+				<defName>Tough</defName>
+				<chance>25</chance>
+			</li>
+		</forcedTraits>
+		<relationSettings>
+			<relationChanceModifierParent>0</relationChanceModifierParent>
+		</relationSettings>
+		<spawnCategories>
+			<li>DragonianSlave</li>
+			<li>DragonianCivil</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Lab_Child</defName>
+		<title>Dragonian lab child</title>
+		<titleShort>lab child</titleShort>
+		<baseDescription>[PAWN_nameDef] was the result of an gene-tailored experiment, aiming to improve the capacity of the race. \n\nUnlike the mass-produced vat-grown products, [PAWN_nameDef] was well cared and educated in the lab. [Pawn_pronoun] showed great interests in scientific and technical topics, but knew very little about the nature.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Crafting</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Medicine</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+		<relationSettings>
+			<relationChanceModifierParent>0</relationChanceModifierParent>
+		</relationSettings>
+		<spawnCategories>
+			<li>DragonianCivil</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Idol_Trainee</defName>
+		<title>Dragonian idol trainee</title>
+		<titleShort>idol trainee</titleShort>
+		<baseDescription>[PAWN_nameDef] was chosen into an idol training program at young age. \n\nDragonians are natrually fitted as idol: they are strong, energetic, charming, can sing and dance for hours without getting tired. Particularly talented ones like [PAWN_nameDef] are often chosen into idol training programs, to provide entertainment for people across the galaxy. Even when they failed to pass the program, profits can still be made...</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Cooking</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Intellectual</li>
+		</workDisables>
+		<forcedTraits>
+			<li>
+				<defName>Beauty</defName>
+				<degree>1</degree>
+				<chance>70</chance>
+			</li>
+			<li>
+				<defName>Beauty</defName>
+				<degree>2</degree>
+				<chance>30</chance>
+			</li>
+		</forcedTraits>
+		<spawnCategories>
+			<li>DragonianCivil</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Pet_Kid</defName>
+		<title>Dragonian pet kid</title>
+		<titleShort>pet</titleShort>
+		<baseDescription>[PAWN_nameDef] was raised as a pet in a luxurious family on a glitter world. \n\nDespite being cared very well, all [PAWN_nameDef] learned was how to please and obey [PAWN_possessive] master.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Social</defName>
+				<amount>5</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>-4</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Caring</li>
+			<li>Intellectual</li>
+			<li>Artistic</li>
+			<li>Cooking</li>
+			<li>Crafting</li>
+		</workDisables>
+		<forcedTraits>
+			<li>
+				<defName>Beauty</defName>
+				<degree>1</degree>
+				<chance>70</chance>
+			</li>
+			<li>
+				<defName>Beauty</defName>
+				<degree>2</degree>
+				<chance>30</chance>
+			</li>
+		</forcedTraits>
+		<spawnCategories>
+			<li>DragonianCivil</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>	
 </Defs>

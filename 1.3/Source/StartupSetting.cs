@@ -25,6 +25,7 @@ namespace Dragonian
             if (recruitee.IsWildDragonian())
             {
                 //Log.Message(recruitee.Name+"");
+                recruitee.ClearMind();
                 recruitee.kindDef = DragonianPawnKindDefOf.Dragonian_Slave_Female;
             }
         }

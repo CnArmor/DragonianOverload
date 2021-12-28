@@ -112,6 +112,24 @@
 					<li>
 						<defName>DislikesWomen</defName>
 					</li>
+					<li>
+						<defName>NaturalMood</defName>
+						<degree>1</degree>
+						<commonalityMale>0</commonalityMale>
+						<commonalityFemale>100</commonalityFemale>
+					</li>
+					<li>
+						<defName>NaturalMood</defName>
+						<degree>-1</degree>
+						<commonalityMale>0</commonalityMale>
+						<commonalityFemale>100</commonalityFemale>
+					</li>
+					<li>
+						<defName>NaturalMood</defName>
+						<degree>-2</degree>
+						<commonalityMale>0</commonalityMale>
+						<commonalityFemale>100</commonalityFemale>
+					</li>
 				</disallowedTraits>
 				<forcedRaceTraitEntries> 
 					<li>
@@ -431,7 +449,6 @@
 			<hediffGiverSets>
 				<li>OrganicStandard</li>
 				<li>Human</li>
-				<li>Dragonian_Inate</li>
 			</hediffGiverSets>
 		</race>
 		<recipes>   

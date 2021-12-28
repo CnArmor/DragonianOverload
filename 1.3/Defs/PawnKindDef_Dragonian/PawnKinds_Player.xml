@@ -14,7 +14,7 @@
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
-					<li>DragonianStory</li>
+					<li>DragonianLegacy</li>
 				</categories>
 			</li>
 		</backstoryFiltersOverride>
@@ -51,7 +51,7 @@
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
-					<li>DragonianStory</li>
+					<li>DragonianLegacy</li>
 				</categories>
 			</li>
 		</backstoryFiltersOverride>

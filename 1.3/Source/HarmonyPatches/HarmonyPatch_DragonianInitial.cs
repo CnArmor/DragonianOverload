@@ -17,7 +17,7 @@ namespace Dragonian
                 if (__result.IsDragonian())
                 {
                     __result.abilities?.GainAbility(DragonianAbilityDefOf.Dragonian_DragonbloodOverload);
-                    if (!__result.health.hediffSet.hediffs.Any(hd => hd.def == DragonianHediffDefOf.Dragonian_AutoRecovery))
+                    if (!__result.health.hediffSet.HasHediff(DragonianHediffDefOf.Dragonian_AutoRecovery))
                         __result.health.AddHediff(DragonianHediffDefOf.Dragonian_AutoRecovery);
                 }
             }
