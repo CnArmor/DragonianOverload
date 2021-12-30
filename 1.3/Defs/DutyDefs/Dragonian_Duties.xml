@@ -8,15 +8,16 @@
 					<treeDef>Dragonian_MainWildDragonianBehaviorCore</treeDef>
 				</li>
 				<li Class="ThinkNode_ConditionalRandom">
-				  <chance>0.1</chance>
+				  <chance>0.05</chance>
 				  <subNodes>
 					<li Class="JobGiver_Dance">
-						<ticksRange>750~1250</ticksRange>
+						<ticksRange>900~1200</ticksRange>
 					</li>
 				  </subNodes>
 				</li>
-				<li Class="JobGiver_WanderNearDutyLocation">
-					<wanderRadius>6</wanderRadius>
+				<li Class="Dragonian.JobGiver_ComeBackNearDutyLocation">
+					<wanderRadius>10</wanderRadius>
+					<tooFarRadius>25</tooFarRadius>
 				</li>
 			</subNodes>
 		</thinkNode>

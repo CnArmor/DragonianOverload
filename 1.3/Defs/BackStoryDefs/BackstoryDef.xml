@@ -206,10 +206,6 @@
 				<amount>-4</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
-				<amount>-4</amount>
-			</li>
-			<li>
 				<defName>Cooking</defName>
 				<amount>-2</amount>
 			</li>
@@ -251,10 +247,6 @@
 				<amount>-4</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
-				<amount>-4</amount>
-			</li>
-			<li>
 				<defName>Cooking</defName>
 				<amount>-2</amount>
 			</li>
@@ -289,10 +281,6 @@
 			</li>
 			<li>
 				<defName>Construction</defName>
-				<amount>-4</amount>
-			</li>
-			<li>
-				<defName>Crafting</defName>
 				<amount>-4</amount>
 			</li>
 			<li>

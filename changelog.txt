@@ -1,3 +1,10 @@
+0.5.3
+- Further improved wild dragonian behaviour.
+
+- Added 6 childhood backstories and 7 adulthood backstories to tribal/wild dragonians
+
+- Changed tribal/wild dragonian's meditation focus to natural.
+
 0.5.2
 - Added a pseudo AI that let npc dragonians enter dragonblood overload state in combat.
 

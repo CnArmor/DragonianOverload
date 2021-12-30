@@ -229,4 +229,24 @@ namespace Dragonian
             }
         }
     }
+
+    [HarmonyPatch(typeof(JobGiver_GetFood), "TryGiveJob")]
+    public class Patch_JobGiver_GetFoodTranspiler
+    {
+        [HarmonyTranspiler]
+        static IEnumerable<CodeInstruction> JobGiver_GetFoodTranspiler(IEnumerable<CodeInstruction> instructions) //fix to enable wild dragonian to harvest plants for food
+        {
+            MethodInfo isWildMan = AccessTools.Method(typeof(WildManUtility), "IsWildMan");
+            MethodInfo isWildManOrWildDragonian = AccessTools.Method(typeof(DragonianUtility), "IsWildManOrWildDragonian");
+            List<CodeInstruction> codes = instructions.ToList();
+            foreach (CodeInstruction code in codes)
+            {
+                if (code.Calls(isWildMan))
+                {
+                    code.operand = isWildManOrWildDragonian;
+                }
+                yield return code;
+            }
+        }
+    }
 }
