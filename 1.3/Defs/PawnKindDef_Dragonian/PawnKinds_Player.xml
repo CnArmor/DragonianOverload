@@ -65,5 +65,37 @@
 			<li>DR_Basic</li>
 		</apparelTags>	
 	</PawnKindDef>
+	
+	<PawnKindDef>
+		<defName>Dragonian_Wild</defName>
+		<label>wild dragonian</label>
+		<labelPlural>wild dragonian</labelPlural>
+		<labelFemale>wild dragonian</labelFemale>
+		<labelFemalePlural>wild dragonian</labelFemalePlural>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<combatPower>60</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<race>Dragonian_Female</race>
+		<acceptArrestChanceFactor>0.5</acceptArrestChanceFactor>
+		<initialWillRange>3~5</initialWillRange>
+		<initialResistanceRange>30~47</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>DragonianTribal</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+		<apparelMoney>
+			<min>1200</min>
+			<max>1200</max>
+		</apparelMoney>
+		<apparelTags>
+			<li>DR_Basic</li>
+		</apparelTags>	
+	</PawnKindDef>
 
 </Defs>

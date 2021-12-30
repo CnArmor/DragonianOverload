@@ -6,7 +6,7 @@
 		<value>
 			<!--wild dragonian core-->
 			<li Class="ThinkNode_ConditionalPawnKind">
-				<pawnKind>Dragonian_Female</pawnKind>
+				<pawnKind>Dragonian_Wild</pawnKind>
 				<subNodes>
 					<li Class="ThinkNode_Subtree">
 						<treeDef>Dragonian_MainWildDragonianBehaviorCore</treeDef>
@@ -16,7 +16,7 @@
 			</li>
 			<!--wild dragonian idle-->
 			<li Class="ThinkNode_ConditionalPawnKind">
-				<pawnKind>Dragonian_Female</pawnKind>
+				<pawnKind>Dragonian_Wild</pawnKind>
 				<subNodes>
 					<li Class="ThinkNode_Tagger">
 						<tagToGive>Idle</tagToGive>

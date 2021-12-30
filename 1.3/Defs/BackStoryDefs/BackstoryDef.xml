@@ -178,13 +178,13 @@
 	
 	
 	
-	<!--		Childhood		-->
+	<!--					====Childhood====					-->
 	
-	<!--		Wild & Tribal		-->
+	<!--					====Wild & Tribal====					-->
 	
 	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
 		<defName>Dragonian_Carefree_Wildborn</defName>
-		<title>Dragonian carefree wild born</title>
+		<title>Dragonian carefree child</title>
 		<titleShort>carefree child</titleShort>
 		<baseDescription>[PAWN_nameDef] was raised in the wild. \n\nBeing carefree in the nature, [PAWN_nameDef] learned how to pick wild fruits and communicate with animals.</baseDescription>
 		<slot>Childhood</slot>
@@ -206,6 +206,10 @@
 				<amount>-4</amount>
 			</li>
 			<li>
+				<defName>Crafting</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
 				<defName>Cooking</defName>
 				<amount>-2</amount>
 			</li>
@@ -216,16 +220,16 @@
 		</skillGains>
 		<workDisables>			
 			<li>Intellectual</li>
-			<li>Crafting</li>
 		</workDisables>
 		<spawnCategories>
 			<li>DragonianTribal</li>
+			<li>DragonianSlave</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
 	
 	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
 		<defName>Dragonian_Brave_Wildborn</defName>
-		<title>Dragonian brave wild born</title>
+		<title>Dragonian brave child</title>
 		<titleShort>brave child</titleShort>
 		<baseDescription>[PAWN_nameDef] was raised in the wild. \n\n[PAWN_nameDef] was a brave child and took many adventures the others wouldn't dare to.</baseDescription>
 		<slot>Childhood</slot>
@@ -247,6 +251,10 @@
 				<amount>-4</amount>
 			</li>
 			<li>
+				<defName>Crafting</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
 				<defName>Cooking</defName>
 				<amount>-2</amount>
 			</li>
@@ -257,17 +265,16 @@
 		</skillGains>
 		<workDisables>			
 			<li>Intellectual</li>
-			<li>Artistic</li>
-			<li>Crafting</li>
 		</workDisables>
 		<spawnCategories>
 			<li>DragonianTribal</li>
+			<li>DragonianSlave</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
 	
 	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
 		<defName>Dragonian_Caring_Wildborn</defName>
-		<title>Dragonian caring wild born</title>
+		<title>Dragonian caring child</title>
 		<titleShort>caring child</titleShort>
 		<baseDescription>[PAWN_nameDef] was raised in the wild. \n\nBeing very sympathetic and caring, [PAWN_nameDef] helped others when in need, and benefited from all the helping experiences.</baseDescription>
 		<slot>Childhood</slot>
@@ -285,6 +292,10 @@
 				<amount>-4</amount>
 			</li>
 			<li>
+				<defName>Crafting</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
 				<defName>Cooking</defName>
 				<amount>1</amount>
 			</li>
@@ -295,10 +306,10 @@
 		</skillGains>
 		<workDisables>			
 			<li>Intellectual</li>
-			<li>Crafting</li>
 		</workDisables>
 		<spawnCategories>
 			<li>DragonianTribal</li>
+			<li>DragonianSlave</li>
 		</spawnCategories>
 		<forcedTraits>
 			<li>
@@ -309,15 +320,15 @@
 	</AlienRace.BackstoryDef>
 	
 	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
-		<defName>Dragonian_Shaman_Apprentice</defName>
-		<title>Dragonian shaman apprentice</title>
-		<titleShort>shaman apprentice</titleShort>
-		<baseDescription>[PAWN_nameDef] was raised in the wild. \n\nBeing smarter than other children, [PAWN_nameDef] was taught various knowledge to become a shaman of the tribe one day.</baseDescription>
+		<defName>Dragonian_Smart_Wildborn</defName>
+		<title>Dragonian smart child</title>
+		<titleShort>smart child</titleShort>
+		<baseDescription>[PAWN_nameDef] was raised in the wild. \n\n[PAWN_nameDef] was smarter and more curious than other children. [PAWN_pronoun] acquired numerous knowledge by asking the tribe's shaman and chief a lot of questions, bothering them to no end.</baseDescription>
 		<slot>Childhood</slot>
 		<skillGains>
 			<li>
 				<defName>Medicine</defName>
-				<amount>3</amount>
+				<amount>2</amount>
 			</li>
 			<li>
 				<defName>Mining</defName>
@@ -333,7 +344,7 @@
 			</li>
 			<li>
 				<defName>Intellectual</defName>
-				<amount>1</amount>
+				<amount>2</amount>
 			</li>
 			<li>
 				<defName>Social</defName>
@@ -342,6 +353,7 @@
 		</skillGains>
 		<spawnCategories>
 			<li>DragonianTribal</li>
+			<li>DragonianSlave</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
 	
@@ -378,6 +390,7 @@
 		</workDisables>
 		<spawnCategories>
 			<li>DragonianTribal</li>
+			<li>DragonianSlave</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
 	
@@ -385,7 +398,7 @@
 		<defName>Dragonian_Cave_Child</defName>
 		<title>Dragonian cave child</title>
 		<titleShort>cave child</titleShort>
-		<baseDescription>[PAWN_nameDef] was raised in the wild, in a tribe living in the caves. \n\n[PAWN_nameDef] spent most of [PAWN_possessive] childhood looking for shiny rocks and tending mushrooms. [PAWN_pronoun] also learned to fight insectoids when the need arise.</baseDescription>
+		<baseDescription>[PAWN_nameDef] was raised in the wild. \n\n[PAWN_nameDef] was particularly interested in caves, and spent most of [PAWN_possessive] childhood looking for shiny rocks and picking mushrooms. [PAWN_pronoun] also learned to fight insectoids when the need arise.</baseDescription>
 		<slot>Childhood</slot>
 		<skillGains>
 			<li>
@@ -394,7 +407,7 @@
 			</li>
 			<li>
 				<defName>Plants</defName>
-				<amount>2</amount>
+				<amount>1</amount>
 			</li>
 			<li>
 				<defName>Mining</defName>
@@ -418,25 +431,38 @@
 		</workDisables>
 		<spawnCategories>
 			<li>DragonianTribal</li>
+			<li>DragonianSlave</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
 	
-	<!--		Civil & Spacer		-->
+	<!--					====Civil & Spacer====					-->
 	
 	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
 		<defName>Dragonian_VatGrown_Child</defName>
 		<title>Dragonian vat-grown child</title>
 		<titleShort>vat-grown child</titleShort>
-		<baseDescription>Given birth by an artifical womb, grown at an accelerated rate inside a vat, [PAWN_nameDef] was made for a sole purpose: to be sold to a client. \n\nDragonians like [PAWN_nameDef] were gene-tailored to be stronger, more charming, and brain-washed to become obidient. They are often sold to military or slavers, only very few lucky ones are able to avoid such destiny.</baseDescription>
+		<baseDescription>[PAWN_nameDef] was a vat-grown "product" made for one purpose: to be sold to a client. \n\n[PAWN_nameDef] was force-feeded with knowledge of varying labors, and brain-washed to obey orders. Dragonians like [PAWN_objective] are often sold to military or slavers, and only very few lucky ones are able to avoid such destiny.</baseDescription>
 		<slot>Childhood</slot>
 		<skillGains>
 			<li>
 				<defName>Melee</defName>
-				<amount>3</amount>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>1</amount>
 			</li>
 			<li>
 				<defName>Social</defName>
-				<amount>2</amount>
+				<amount>-2</amount>
 			</li>
 			<li>
 				<defName>Crafting</defName>
@@ -513,7 +539,7 @@
 		<defName>Dragonian_Idol_Trainee</defName>
 		<title>Dragonian idol trainee</title>
 		<titleShort>idol trainee</titleShort>
-		<baseDescription>[PAWN_nameDef] was chosen into an idol training program at young age. \n\nDragonians are natrually fitted as idol: they are strong, energetic, charming, can sing and dance for hours without getting tired. Particularly talented ones like [PAWN_nameDef] are often chosen into idol training programs, to provide entertainment for people across the galaxy. Even when they failed to pass the program, profits can still be made...</baseDescription>
+		<baseDescription>[PAWN_nameDef] was chosen into an idol training program at young age. \n\nDragonians are natrually fitted as idol: resilient, charming, can sing and dance for hours without getting tired. Particularly talented ones like [PAWN_nameDef] are often chosen into idol training programs, to provide entertainment for people across the galaxy. Even when they failed to pass the program, profits can still be made...</baseDescription>
 		<slot>Childhood</slot>
 		<skillGains>
 			<li>
@@ -536,6 +562,10 @@
 				<defName>Cooking</defName>
 				<amount>-2</amount>
 			</li>
+			<li>
+				<defName>Medicine</defName>
+				<amount>-2</amount>
+			</li>
 		</skillGains>
 		<workDisables>			
 			<li>Intellectual</li>
@@ -544,12 +574,12 @@
 			<li>
 				<defName>Beauty</defName>
 				<degree>1</degree>
-				<chance>70</chance>
+				<chance>50</chance>
 			</li>
 			<li>
 				<defName>Beauty</defName>
 				<degree>2</degree>
-				<chance>30</chance>
+				<chance>20</chance>
 			</li>
 		</forcedTraits>
 		<spawnCategories>
@@ -559,7 +589,7 @@
 	
 	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
 		<defName>Dragonian_Pet_Kid</defName>
-		<title>Dragonian pet kid</title>
+		<title>Dragonian pet</title>
 		<titleShort>pet</titleShort>
 		<baseDescription>[PAWN_nameDef] was raised as a pet in a luxurious family on a glitter world. \n\nDespite being cared very well, all [PAWN_nameDef] learned was how to please and obey [PAWN_possessive] master.</baseDescription>
 		<slot>Childhood</slot>
@@ -584,13 +614,25 @@
 				<defName>Animals</defName>
 				<amount>-4</amount>
 			</li>
+			<li>
+				<defName>Crafting</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Cooking</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Medicine</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Artistic</defName>
+				<amount>-2</amount>
+			</li>
 		</skillGains>
 		<workDisables>			
-			<li>Caring</li>
 			<li>Intellectual</li>
-			<li>Artistic</li>
-			<li>Cooking</li>
-			<li>Crafting</li>
 		</workDisables>
 		<forcedTraits>
 			<li>
@@ -608,4 +650,396 @@
 			<li>DragonianCivil</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>	
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Miner_Child</defName>
+		<title>Dragonian miner child</title>
+		<titleShort>miner child</titleShort>
+		<baseDescription>[PAWN_nameDef] was brought to the mines of a tunnel world at very young age, where [PAWN_pronoun] was forced to work. \n\nFortunately, [PAWN_nameDef]'s colleague miners treated [PAWN_objective] warmly, so having a tough childhood didn't bother [PAWN_objective] too much.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Artistic</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Intellectual</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianSlave</li>
+			<li>DragonianCivil</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Farmer_Child</defName>
+		<title>Dragonian farmer child</title>
+		<titleShort>farmer child</titleShort>
+		<baseDescription>[PAWN_nameDef] was brought to the fields of a farm world at very young age, where [PAWN_pronoun] was forced to work. \n\nDespite the tough labor, the environment of [PAWN_nameDef]'s work place was quite good, so [Pawn_pronoun] often wandered around the field and played with the animals when [Pawn_pronoun] managed to get some free times.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Artistic</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Intellectual</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianSlave</li>
+			<li>DragonianCivil</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Slave_Child</defName>
+		<title>Dragonian slave child</title>
+		<titleShort>slave child</titleShort>
+		<baseDescription>[PAWN_nameDef] was born into slavery. [PAWN_pronoun] was sperated from [PAWN_possessive] parents and never knew their face. \n\nAs a dragonian, [PAWN_nameDef] had the potential to become the most priced goods of [PAWN_possessive] master, so [Pawn_pronoun] was treated a bit better than the average slaves. But it was still a tragic childhood, as sleeping in a bedroll was considered luxuious, and nutrient paste was considered a fine meal comparing to the normal kibble-like feedings.</baseDescription>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Crafting</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Artistic</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+		<workDisables>			
+			<li>Intellectual</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianSlave</li>
+			<li>DragonianCivil</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<!--					====Adulthood====					-->
+	
+	<!--					====Wild & Tribal====				-->
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Warrior</defName>
+		<title>Dragonian warrior</title>
+		<titleShort>warrior</titleShort>
+		<baseDescription>[PAWN_nameDef] was the warrior of a tribe. \n\nHardened body, years of fighting experience, and dragonian's burst strength, all made [PAWN_nameDef] a force to be reckoned with.</baseDescription>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>5</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+			<defName>Cooking</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Intellectual</li>
+			<li>Artistic</li>
+			<li>Crafting</li>
+		</workDisables>
+		<disallowedTraits>
+			<li>
+				<defName>Wimp</defName>
+			</li>
+		</disallowedTraits>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Gatherer</defName>
+		<title>Dragonian gatherer</title>
+		<titleShort>gatherer</titleShort>
+		<baseDescription>[PAWN_nameDef] was one of the experienced gatherers of a tribe. \n\n[PAWN_nameDef] can easily seperate the edible and non-ediblt parts of wild plants.</baseDescription>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defName>Artistic</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Intellectual</li>
+			<li>Crafting</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Chief</defName>
+		<title>Dragonian chief</title>
+		<titleShort>chief</titleShort>
+		<linkedBackstory>Dragonian_Smart_Wildborn</linkedBackstory>
+		<baseDescription>[PAWN_nameDef] was the chief of a tribe. \n\nAs the chief, [PAWN_nameDef] was the head and the brain of the tribe. [PAWN_possessive] duty was to communicate with the members of the tribe and decide the tribe's next action. It is possible for a dragonian tribe to have multiple chiefs.</baseDescription>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Mining</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Cooking</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>3</amount>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Crafting</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Shaman</defName>
+		<title>Dragonian shaman</title>
+		<titleShort>shaman</titleShort>
+		<baseDescription>[PAWN_nameDef] was the shaman of a tribe. \n\nAs a shaman, [PAWN_nameDef] was specialized in taking care of wounded and sick tribe members. [PAWN_pronoun] also do some basic cooking sometimes.</baseDescription>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Medicine</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+			<defName>Cooking</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>2</amount>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Beast_Talker</defName>
+		<title>Dragonian beast talker</title>
+		<titleShort>beast talker</titleShort>
+		<baseDescription>[PAWN_nameDef] was in charge of handling wild animals in a tribe. \n\nDragonian tribes don't usually keep animals around, because it will make them a bigger target for slavers and bounty hunters. When they need animal products, the animal handlers of the tribe will approach wild animals, calm them down, gather the resources, then move on. The way they calm down wild animals makes people believe they can talk to the animals, hence the nickname of beast talkers.</baseDescription>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+			<defName>Cooking</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Intellectual</li>
+			<li>Crafting</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Weaver</defName>
+		<title>Dragonian weaver</title>
+		<titleShort>weaver</titleShort>
+		<baseDescription>[PAWN_nameDef] was the weaver in a tribe. \n\nAlthough the typical cloths worn by dragonian tribals are not complex, they still need to be made. And [PAWN_nameDef] was the one to make them. [PAWN_pronoun] may not be particularly skillful, but [PAWN_pronoun] was still leagues better than most of [PAWN_possessive] tribe mates who don't know crafting at all.</baseDescription>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Crafting</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>-1</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>-1</amount>
+			</li>
+			<li>
+				<defName>Cooking</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Intellectual</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="BaseDragonianBackStory">
+		<defName>Dragonian_Cave_Walker</defName>
+		<title>Dragonian cave walker</title>
+		<titleShort>cave walker</titleShort>
+		<linkedBackstory>Dragonian_Cave_Child</linkedBackstory>
+		<baseDescription>[PAWN_nameDef] was the cave expert in a tribe. \n\nAlthough dragonian tribes don't usually go into the depth of a cave, it's still necessary to hide from enemies or gather resources in a cave sometimes. This is when [PAWN_nameDef]'s expertise come into work. [PAWN_pronoun] can lead [PAWN_possessive] tribe to safely walk the caves.</baseDescription>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Cooking</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Intellectual</li>
+			<li>Crafting</li>
+		</workDisables>
+		<spawnCategories>
+			<li>DragonianTribal</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
 </Defs>

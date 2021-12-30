@@ -17,7 +17,7 @@ namespace Dragonian
 
         public static bool IsWildDragonian(this Pawn pawn)
         {
-            return pawn.kindDef == DragonianPawnKindDefOf.Dragonian_Female;
+            return pawn.kindDef == DragonianPawnKindDefOf.Dragonian_Wild;
         }
 
         public static bool IsWildManOrWildDragonian(this Pawn pawn)

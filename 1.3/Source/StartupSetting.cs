@@ -48,6 +48,7 @@ namespace Dragonian
     {
         public static PawnKindDef Dragonian_Female;
         public static PawnKindDef Dragonian_Slave_Female;
+        public static PawnKindDef Dragonian_Wild;
     }
 
     [DefOf]

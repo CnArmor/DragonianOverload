@@ -49,7 +49,7 @@ namespace Dragonian
             for(int i = 0; i < spawnNumber; i++)
             {
                 IntVec3 spawnLoc = CellFinder.RandomClosewalkCellNear(loc, map, 5, null);
-                pawn = PawnGenerator.GeneratePawn(DragonianPawnKindDefOf.Dragonian_Female, Find.FactionManager.FirstFactionOfDef(DragonianFactionDefOf.Dragonians_Hidden));
+                pawn = PawnGenerator.GeneratePawn(DragonianPawnKindDefOf.Dragonian_Wild, Find.FactionManager.FirstFactionOfDef(DragonianFactionDefOf.Dragonians_Hidden));
                 pawn.SetFaction(null, null);
                 GenSpawn.Spawn(pawn, spawnLoc, map, WipeMode.Vanish);
                 pawnList.Add(pawn);
