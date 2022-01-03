@@ -19,6 +19,15 @@ namespace Dragonian
                     __result.abilities?.GainAbility(DragonianAbilityDefOf.Dragonian_DragonbloodOverload);
                     if (!__result.health.hediffSet.HasHediff(DragonianHediffDefOf.Dragonian_AutoRecovery))
                         __result.health.AddHediff(DragonianHediffDefOf.Dragonian_AutoRecovery);
+                    if (__result.skills.GetSkill(SkillDefOf.Melee).passion != Passion.Major)
+                    {
+                        if (Rand.Value < 0.3)
+                            __result.skills.GetSkill(SkillDefOf.Melee).passion = Passion.Major;
+                        else
+                            __result.skills.GetSkill(SkillDefOf.Melee).passion = Passion.Minor;
+                    }
+                    if (__result.skills.GetSkill(SkillDefOf.Shooting).passion != Passion.None)
+                        __result.skills.GetSkill(SkillDefOf.Shooting).passion = Passion.None;
                 }
             }
         }

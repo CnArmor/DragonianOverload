@@ -1,3 +1,10 @@
+0.5.4
+- Patch to make dragonians to at least have minor passion in melee, and never have passion in shooting (not like they can shoot anyway).
+
+- Added 8 childhood backstories and 13 adulthood backstories to dragonian slave / space refugee.
+
+- Dragonians now have a low chance (5%) to spawn as space refugee.
+
 0.5.3
 - Further improved wild dragonian behaviour.
 

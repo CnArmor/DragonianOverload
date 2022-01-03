@@ -26,7 +26,7 @@ namespace Dragonian
             {
                 //Log.Message(recruitee.Name+"");
                 recruitee.ClearMind();
-                recruitee.kindDef = DragonianPawnKindDefOf.Dragonian_Slave_Female;
+                recruitee.kindDef = DragonianPawnKindDefOf.Dragonian_Civil;
             }
         }
     }
@@ -49,6 +49,7 @@ namespace Dragonian
         public static PawnKindDef Dragonian_Female;
         public static PawnKindDef Dragonian_Slave_Female;
         public static PawnKindDef Dragonian_Wild;
+        public static PawnKindDef Dragonian_Civil;
     }
 
     [DefOf]

@@ -74,7 +74,7 @@
 		<labelFemalePlural>wild dragonian</labelFemalePlural>
 		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
 		<forceNormalGearQuality>true</forceNormalGearQuality>
-		<combatPower>60</combatPower>
+		<combatPower>80</combatPower>
 		<itemQuality>Poor</itemQuality>
 		<race>Dragonian_Female</race>
 		<acceptArrestChanceFactor>0.5</acceptArrestChanceFactor>
@@ -97,5 +97,77 @@
 			<li>DR_Basic</li>
 		</apparelTags>	
 	</PawnKindDef>
+	
+	<PawnKindDef>
+		<defName>Dragonian_Slave</defName>
+		<label>dragonian</label>
+		<labelPlural>dragonians</labelPlural>
+		<labelFemale>dragonian</labelFemale>
+		<labelFemalePlural>dragonians</labelFemalePlural>
+		<isFighter>false</isFighter>
+		<combatPower>80</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<initialWillRange>3~5</initialWillRange>
+		<initialResistanceRange>6~10</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>DragonianSlave</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<race>Dragonian_Female</race>
+		<baseRecruitDifficulty>0.20</baseRecruitDifficulty>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<defaultFactionType>OutlanderCivil</defaultFactionType>
+		<apparelMoney>
+			<min>1200</min>
+			<max>1200</max>
+		</apparelMoney>
+		<apparelTags>
+			<li>DR_Apparel</li>
+			<li>DR_Basic</li>
+		</apparelTags>	
+		<invNutrition>1</invNutrition>
+		<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+	</PawnKindDef>
 
+	<PawnKindDef>
+		<defName>Dragonian_Civil</defName>
+		<label>dragonian</label>
+		<labelPlural>dragonians</labelPlural>
+		<labelFemale>dragonian</labelFemale>
+		<labelFemalePlural>dragonians</labelFemalePlural>
+		<isFighter>false</isFighter>
+		<combatPower>80</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<initialWillRange>3~5</initialWillRange>
+		<initialResistanceRange>6~10</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>DragonianCivil</li>
+					<li>DragonianServant</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<race>Dragonian_Female</race>
+		<baseRecruitDifficulty>0.20</baseRecruitDifficulty>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<defaultFactionType>OutlanderCivil</defaultFactionType>
+		<apparelMoney>
+			<min>1200</min>
+			<max>1200</max>
+		</apparelMoney>
+		<apparelTags>
+			<li>DR_Apparel</li>
+			<li>DR_Basic</li>
+		</apparelTags>	
+		<invNutrition>1</invNutrition>
+		<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+	</PawnKindDef>
 </Defs>

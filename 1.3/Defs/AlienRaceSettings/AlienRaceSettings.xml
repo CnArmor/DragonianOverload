@@ -6,11 +6,19 @@
 			<alienslavekinds>
 				<li>
 					<kindDefs>
-						<li>Dragonian_Slave_Female</li>
+						<li>Dragonian_Slave</li>
 					</kindDefs>
 					<chance>25.0</chance>
 				</li>
 			</alienslavekinds>
+			<alienrefugeekinds>
+				<li>
+					<kindDefs>
+						<li>Dragonian_Civil</li>
+					</kindDefs>
+					<chance>5.0</chance>
+				</li>
+			</alienrefugeekinds>
 		</pawnKindSettings>
 	</AlienRace.RaceSettings>
 </Defs>

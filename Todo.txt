@@ -1,6 +1,5 @@
 Todo:
 > apparel graphics for male dragonians
-> backstories
 > scenario
 > faction??? Not sure, might scrap this. Bloat factions further more.
 > dragonian power armor?
@@ -8,8 +7,10 @@ Todo:
 > patch for various mods
 	- RBSE/EPoE/EPoE Forked
 	- SoS2
+> more backstories
 
 Finished:
+> A bunch of backstories.
 > Pseudo AI to apply ability effect for npc dragonians in combat
 > Wild dragonian tribe event
 > Optimized work giver for an insignificant amount, added self-milking
