@@ -12,6 +12,92 @@
 				<maxDamageForSocialfight>8</maxDamageForSocialfight>
 				<humanRecipeImport>true</humanRecipeImport>
 				<alienPartGenerator>
+					<bodyAddons>
+						<li>
+							<drawSize>1</drawSize>
+							<path>Things/Dragonian/BodyAddons/DragonianHorn_Female_L</path>
+							<colorChannel>horn</colorChannel>
+							<bodyPart>left horn</bodyPart>
+							<inFrontOfBody>true</inFrontOfBody>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>true</drawnInBed>
+							<drawForMale>false</drawForMale>
+							<drawForFemale>true</drawForFemale>
+							<alignWithHead>true</alignWithHead>
+							<bodyTypeRequirement>Female</bodyTypeRequirement>
+							<offsets>
+								<south>
+									<layerOffset>-0.28</layerOffset>
+								</south>
+								<north>
+									<layerOffset>-0.34</layerOffset>
+								</north>
+							</offsets>
+						</li>
+						<li>
+							<drawSize>1</drawSize>
+							<path>Things/Dragonian/BodyAddons/DragonianHorn_Female_R</path>
+							<colorChannel>horn</colorChannel>
+							<bodyPart>right horn</bodyPart>
+							<inFrontOfBody>true</inFrontOfBody>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>true</drawnInBed>
+							<drawForMale>false</drawForMale>
+							<drawForFemale>true</drawForFemale>
+							<alignWithHead>true</alignWithHead>
+							<bodyTypeRequirement>Female</bodyTypeRequirement>
+							<offsets>
+								<south>
+									<layerOffset>-0.28</layerOffset>
+								</south>
+								<north>
+									<layerOffset>-0.34</layerOffset>
+								</north>
+							</offsets>
+						</li>
+						<li>
+							<drawSize>1</drawSize>
+							<path>Things/Dragonian/BodyAddons/DragonianHorn_Male_L</path>
+							<colorChannel>horn</colorChannel>
+							<bodyPart>left horn</bodyPart>
+							<inFrontOfBody>true</inFrontOfBody>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>true</drawnInBed>
+							<drawForMale>true</drawForMale>
+							<drawForFemale>false</drawForFemale>
+							<alignWithHead>true</alignWithHead>
+							<bodyTypeRequirement>Male</bodyTypeRequirement>
+							<offsets>
+								<south>
+									<layerOffset>-0.28</layerOffset>
+								</south>
+								<north>
+									<layerOffset>-0.34</layerOffset>
+								</north>
+							</offsets>
+						</li>
+						<li>
+							<drawSize>1</drawSize>
+							<path>Things/Dragonian/BodyAddons/DragonianHorn_Male_R</path>
+							<colorChannel>horn</colorChannel>
+							<bodyPart>right horn</bodyPart>
+							<inFrontOfBody>true</inFrontOfBody>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>true</drawnInBed>
+							<drawForMale>true</drawForMale>
+							<drawForFemale>false</drawForFemale>
+							<alignWithHead>true</alignWithHead>
+							<bodyTypeRequirement>Male</bodyTypeRequirement>
+							<offsets>
+								<south>
+									<layerOffset>-0.28</layerOffset>
+								</south>
+								<north>
+									<layerOffset>-0.34</layerOffset>
+								</north>
+							</offsets>
+						</li>
+					</bodyAddons>
 					<aliencrowntypes>
 						<li>Average_Normal</li>
 					</aliencrowntypes>
@@ -21,6 +107,7 @@
 					</alienbodytypes>
 					<headOffset>(0, -0.1)</headOffset>	
 					<useGenderedHeads>true</useGenderedHeads>
+					<getsGreyAt>9999</getsGreyAt>
 					<customDrawSize>(1, 1)</customDrawSize>
 					<customPortraitDrawSize>(0.95, 0.95)</customPortraitDrawSize>
 					<!--색상관련 -->
@@ -38,6 +125,17 @@
 						</li>
 						<li>
 							<name>hair</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>1</weight>
+										<only>(255,255,255)</only>
+									</li>
+								</options>
+							</first>
+						</li>
+						<li>
+							<name>horn</name>
 							<first Class="ColorGenerator_Options">
 								<options>
 									<li>

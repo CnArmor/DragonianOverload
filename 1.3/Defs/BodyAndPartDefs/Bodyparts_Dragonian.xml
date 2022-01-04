@@ -13,6 +13,18 @@
 		</tags>
 	</BodyPartDef>
 	
+	<BodyPartDef>
+		<defName>DR_Horn</defName>
+		<label>dragon horn</label>
+		<hitPoints>25</hitPoints>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<canSuggestAmputation>false</canSuggestAmputation>
+		<bleedRate>0</bleedRate>
+		<destroyableByDamage>false</destroyableByDamage>
+	</BodyPartDef>
+	
 	<BodyPartGroupDef>
 		<defName>Tail</defName>
 		<label>tail</label>
