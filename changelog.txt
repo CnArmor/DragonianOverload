@@ -1,3 +1,6 @@
+0.6.0
+- Completely separated horn and hair graphic. Changed female horn north graphic. Horns are now rendered as body addon.
+
 0.5.4
 - Patch to make dragonians to at least have minor passion in melee, and never have passion in shooting (not like they can shoot anyway).
 

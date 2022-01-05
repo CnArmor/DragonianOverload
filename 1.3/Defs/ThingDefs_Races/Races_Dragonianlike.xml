@@ -18,84 +18,52 @@
 							<path>Things/Dragonian/BodyAddons/DragonianHorn_Female_L</path>
 							<colorChannel>horn</colorChannel>
 							<bodyPart>left horn</bodyPart>
-							<inFrontOfBody>true</inFrontOfBody>
+							<inFrontOfBody>false</inFrontOfBody>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>true</drawnInBed>
 							<drawForMale>false</drawForMale>
 							<drawForFemale>true</drawForFemale>
 							<alignWithHead>true</alignWithHead>
 							<bodyTypeRequirement>Female</bodyTypeRequirement>
-							<offsets>
-								<south>
-									<layerOffset>-0.28</layerOffset>
-								</south>
-								<north>
-									<layerOffset>-0.34</layerOffset>
-								</north>
-							</offsets>
 						</li>
 						<li>
 							<drawSize>1</drawSize>
 							<path>Things/Dragonian/BodyAddons/DragonianHorn_Female_R</path>
 							<colorChannel>horn</colorChannel>
 							<bodyPart>right horn</bodyPart>
-							<inFrontOfBody>true</inFrontOfBody>
+							<inFrontOfBody>false</inFrontOfBody>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>true</drawnInBed>
 							<drawForMale>false</drawForMale>
 							<drawForFemale>true</drawForFemale>
 							<alignWithHead>true</alignWithHead>
 							<bodyTypeRequirement>Female</bodyTypeRequirement>
-							<offsets>
-								<south>
-									<layerOffset>-0.28</layerOffset>
-								</south>
-								<north>
-									<layerOffset>-0.34</layerOffset>
-								</north>
-							</offsets>
 						</li>
 						<li>
 							<drawSize>1</drawSize>
 							<path>Things/Dragonian/BodyAddons/DragonianHorn_Male_L</path>
 							<colorChannel>horn</colorChannel>
 							<bodyPart>left horn</bodyPart>
-							<inFrontOfBody>true</inFrontOfBody>
+							<inFrontOfBody>false</inFrontOfBody>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>true</drawnInBed>
 							<drawForMale>true</drawForMale>
 							<drawForFemale>false</drawForFemale>
 							<alignWithHead>true</alignWithHead>
 							<bodyTypeRequirement>Male</bodyTypeRequirement>
-							<offsets>
-								<south>
-									<layerOffset>-0.28</layerOffset>
-								</south>
-								<north>
-									<layerOffset>-0.34</layerOffset>
-								</north>
-							</offsets>
 						</li>
 						<li>
 							<drawSize>1</drawSize>
 							<path>Things/Dragonian/BodyAddons/DragonianHorn_Male_R</path>
 							<colorChannel>horn</colorChannel>
 							<bodyPart>right horn</bodyPart>
-							<inFrontOfBody>true</inFrontOfBody>
+							<inFrontOfBody>false</inFrontOfBody>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>true</drawnInBed>
 							<drawForMale>true</drawForMale>
 							<drawForFemale>false</drawForFemale>
 							<alignWithHead>true</alignWithHead>
 							<bodyTypeRequirement>Male</bodyTypeRequirement>
-							<offsets>
-								<south>
-									<layerOffset>-0.28</layerOffset>
-								</south>
-								<north>
-									<layerOffset>-0.34</layerOffset>
-								</north>
-							</offsets>
 						</li>
 					</bodyAddons>
 					<aliencrowntypes>
