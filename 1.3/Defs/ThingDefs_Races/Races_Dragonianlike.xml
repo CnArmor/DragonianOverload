@@ -25,6 +25,11 @@
 							<drawForFemale>true</drawForFemale>
 							<alignWithHead>true</alignWithHead>
 							<bodyTypeRequirement>Female</bodyTypeRequirement>
+							<offsets>
+								<east>
+									<layerOffset>-0.331</layerOffset>
+								</east>
+							</offsets>
 						</li>
 						<li>
 							<drawSize>1</drawSize>
@@ -38,6 +43,11 @@
 							<drawForFemale>true</drawForFemale>
 							<alignWithHead>true</alignWithHead>
 							<bodyTypeRequirement>Female</bodyTypeRequirement>
+							<offsets>
+								<east>
+									<layerOffset>-0.331</layerOffset>
+								</east>
+							</offsets>
 						</li>
 						<li>
 							<drawSize>1</drawSize>
@@ -51,6 +61,11 @@
 							<drawForFemale>false</drawForFemale>
 							<alignWithHead>true</alignWithHead>
 							<bodyTypeRequirement>Male</bodyTypeRequirement>
+							<offsets>
+								<east>
+									<layerOffset>-0.331</layerOffset>
+								</east>
+							</offsets>
 						</li>
 						<li>
 							<drawSize>1</drawSize>
@@ -64,6 +79,11 @@
 							<drawForFemale>false</drawForFemale>
 							<alignWithHead>true</alignWithHead>
 							<bodyTypeRequirement>Male</bodyTypeRequirement>
+							<offsets>
+								<east>
+									<layerOffset>-0.331</layerOffset>
+								</east>
+							</offsets>
 						</li>
 					</bodyAddons>
 					<aliencrowntypes>
@@ -288,6 +308,8 @@
 					<li>DR_FlowerRibon</li>
 					<li>DR_BattleDress</li>
 					<li>DR_BattleHelm</li>
+					<li>DR_PowerArmor</li>
+					<li>DR_PowerHelmet</li>
 				</apparelList>
 				<whiteApparelList>
 					<li>Apparel_ShieldBelt</li>
