@@ -114,7 +114,7 @@
 			<bodyPartGroups>
 				<li>FullHead</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Apparel/DR_PowerHelmPH</wornGraphicPath>
+			<wornGraphicPath>Apparel/DR_PowerHelm</wornGraphicPath>
 			<layers>
 				<li>Overhead</li>
 			</layers>

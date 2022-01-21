@@ -39,7 +39,8 @@ namespace Dragonian
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look<float>(ref this.power, "power", 0f, false);
+            Scribe_Values.Look<float>(ref this.power, "Dragonian.PoweredArmorPowerSource.power", 0f, false);
+            Scribe_Values.Look<int>(ref this.nextRebootTick, "Dragonian.PoweredArmorPowerSource.nextRebootTick", 0, false);
         }
         public override IEnumerable<Gizmo> GetWornGizmos()
         {
@@ -58,18 +59,34 @@ namespace Dragonian
             base.Tick();
             if (base.Wearer == null)
             {
-                power = 0f;
+                power = 1f;
                 return;
             }
+            if (!IsActivated)
+            {
+                if(Find.TickManager.TicksGame >= nextRebootTick)
+                {
+                    Activate();
+                }
+                return;
+            }
+            if (power != PowerMax)
+            {
+                power += PowerRechargeRate;
+                if (power > PowerMax)
+                    power = PowerMax;
+            }
 
-            if(power <= 0f && IsActivated)
+            if (power <= 0f && IsActivated)
                 Deactivate();
-            if (power == PowerMax && !IsActivated)
-                Activate();
-
-            power += PowerRechargeRate;
-            if (power > PowerMax)
-                power = PowerMax;
+        }
+        public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
+        {
+            if(dinfo.Def == DamageDefOf.EMP)
+            {
+                Deactivate();
+            }
+            return false;
         }
         private void Activate()
         {
@@ -83,8 +100,11 @@ namespace Dragonian
         private void Deactivate()
         {
             activeStatus = false;
+            nextRebootTick = Find.TickManager.TicksGame + rebootTicks;
         }
-        private float power = 0f;
+        private float power = 1f;
         private bool activeStatus = true;
+        private int rebootTicks = 1200;
+        private int nextRebootTick;
 	}
 }
