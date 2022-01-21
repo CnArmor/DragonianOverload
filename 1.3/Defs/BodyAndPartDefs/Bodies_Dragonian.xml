@@ -154,7 +154,7 @@
 								<li>
 									<def>DR_Horn</def>
 									<customLabel>left horn</customLabel>
-									<coverage>0.15</coverage>
+									<coverage>0.12</coverage>
 									<groups>
 										<li>FullHead</li>
 									</groups>
@@ -162,7 +162,7 @@
 								<li>
 									<def>DR_Horn</def>
 									<customLabel>right horn</customLabel>
-									<coverage>0.15</coverage>
+									<coverage>0.12</coverage>
 									<groups>
 										<li>FullHead</li>
 									</groups>

@@ -50,10 +50,22 @@
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HarmonyPatches\HarmonyPatch_AIDragonianAbility.cs" />
+    <Compile Include="Hediff\HediffComp_PoweredBuffs.cs" />
     <Compile Include="JobWork\JobDriver_FakeCastAbility.cs" />
+    <Compile Include="PowerArmor\Comp_PoweredPassiveBuffs.cs" />
+    <Compile Include="PowerArmor\Gizmo_PowerStatus.cs" />
+    <Compile Include="PowerArmor\PoweredSource.cs" />
     <Compile Include="WildMan\JobGiver_ComeBackNearDutyLocation.cs" />
     <Compile Include="WildMan\LordJob_WildDragonianTribe.cs" />
     <Compile Include="DragonianEffecter.cs" />

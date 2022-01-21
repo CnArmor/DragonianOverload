@@ -30,9 +30,11 @@
 		<defName>DR_PowerArmor</defName>
 		<label>dragonian power armor</label>
 		<description>place holder.</description>
+		<thingClass>Dragonian.PoweredArmorPowerSource</thingClass>
+		<tickerType>Normal</tickerType>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
-			<texPath>Apparel/DR_PowerArmorPH</texPath>
+			<texPath>Apparel/DR_PowerArmor</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -46,6 +48,8 @@
 			<Insulation_Cold>44</Insulation_Cold>
 			<Insulation_Heat>15</Insulation_Heat>
 			<EquipDelay>14</EquipDelay>
+			<DRO_PowerMax>100</DRO_PowerMax>
+			<DRO_PowerRechargeRate>4</DRO_PowerRechargeRate>
 		</statBases>
 		<equippedStatOffsets>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
@@ -63,15 +67,18 @@
 				<li>Arms</li>
 				<li>Legs</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Apparel/DR_PowerArmorPH</wornGraphicPath>
+			<wornGraphicPath>Apparel/DR_PowerArmor</wornGraphicPath>
 			<layers>
+				<li>OnSkin</li>
 				<li>Middle</li>
-				<li>Shell</li>
 			</layers>
 			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 		</apparel>
 		<comps>
 			<li Class="CompProperties_Biocodable"/>
+			<li Class="Dragonian.CompProperties_PoweredPassiveBuffs">
+				<hediff>Dragonian_PowerArmorBuffs</hediff>
+			</li>
 		</comps>
 	</ThingDef>
 	
@@ -81,7 +88,7 @@
     <description>place holder.</description>
 	<techLevel>Spacer</techLevel>
 		<graphicData>
-			<texPath>Apparel/DR_PowerHelmPH</texPath>
+			<texPath>Apparel/DR_PowerHelm</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -115,6 +122,9 @@
 		</apparel>
 		<comps>
 			<li Class="CompProperties_Biocodable"/>
+			<li Class="Dragonian.CompProperties_PoweredPassiveBuffs">
+				<hediff>Dragonian_PowerHelmetBuffs</hediff>
+			</li>
 		</comps>
 	</ThingDef>
 </Defs>

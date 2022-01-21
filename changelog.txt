@@ -1,3 +1,7 @@
+0.6.1
+- Added Dragonian power armor and power helmet.
+- Added basic power function to dragonian power armor.
+
 0.6.0
 - Completely separated horn and hair graphic. Changed female horn north graphic. Horns are now rendered as body addon.
 

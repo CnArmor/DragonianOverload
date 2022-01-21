@@ -20,7 +20,7 @@ namespace Dragonian
             harmony.Patch(AccessTools.Method(typeof(InteractionWorker_RecruitAttempt), "DoRecruit", new[] { typeof(Pawn), typeof(Pawn), typeof(string).MakeByRefType(), typeof(string).MakeByRefType(), typeof(bool), typeof(bool) }),
                 postfix: new HarmonyMethod(patchType, nameof(Patch_InteractionWorker_RecruitAttempt)));
         }
-        public static void Patch_InteractionWorker_RecruitAttempt(ref Pawn recruitee) //on successfully recruiting wild dragonians, change the pawnkind so they no longer have wild properties
+        public static void Patch_InteractionWorker_RecruitAttempt(ref Pawn recruitee) //on successfully recruiting wild dragonians, change the pawnkind so they no longer have wildman behaviours
         {
             if (recruitee.IsWildDragonian())
             {
@@ -114,6 +114,13 @@ namespace Dragonian
     public class DragonianSoundDefOf
     {
         public static SoundDef Dragonian_Ability;
+    }
+
+    [DefOf]
+    public class DragonianStatDefOf
+    {
+        public static StatDef DRO_PowerMax;
+        public static StatDef DRO_PowerRechargeRate;
     }
 
     [HarmonyPatch(typeof(ForbidUtility))]

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>Dragonian_PowerArmorBuffs</defName>
+		<description>The dragonian power armor can provide various passive benefits when its power source is activated.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>power armor</label>
+		<defaultLabelColor>(0.63, 0.96, 0.97)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<extraTooltip/>
+		<comps>
+			<li Class="HediffCompProperties_RemoveIfApparelDropped"/>
+			<li>
+				<compClass>Dragonian.HediffComp_PoweredBuffs</compClass>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<overrideLabel>power armor: Offline</overrideLabel>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<overrideLabel>power armor: Online</overrideLabel>
+				<becomeVisible>true</becomeVisible>
+				<minSeverity>0.5</minSeverity>
+				<statOffsets>
+					<MoveSpeed>0.4</MoveSpeed>
+					<ToxicSensitivity>-0.2</ToxicSensitivity>
+					<CarryingCapacity>20</CarryingCapacity>
+					<ComfyTemperatureMin>-8.0</ComfyTemperatureMin>
+					<ComfyTemperatureMax>8.0</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>Dragonian_PowerHelmetBuffs</defName>
+		<description>The dragonian power armor helmet can provide various passive benefits when a power source is present and activated.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>power helmet</label>
+		<defaultLabelColor>(0.63, 0.96, 0.97)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<extraTooltip/>
+		<comps>
+			<li Class="HediffCompProperties_RemoveIfApparelDropped"/>
+			<li>
+				<compClass>Dragonian.HediffComp_PoweredBuffs</compClass>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<overrideLabel>power helmet: Offline</overrideLabel>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<overrideLabel>power helmet: Online</overrideLabel>
+				<becomeVisible>true</becomeVisible>
+				<minSeverity>0.5</minSeverity>
+				<statOffsets>
+					<ToxicSensitivity>-0.5</ToxicSensitivity>
+					<MeleeHitChance>4.0</MeleeHitChance>
+					<ComfyTemperatureMin>-4.0</ComfyTemperatureMin>
+					<ComfyTemperatureMax>4.0</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>
