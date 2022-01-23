@@ -34,5 +34,44 @@ namespace Dragonian
         {
             return (pawn.AnimalOrWildMan() || pawn.IsWildDragonian());
         }
+
+        public static PoweredArmorPowerSource FindPowerSource(this ThingWithComps thing)
+        {
+            if (thing != null)
+            {
+                if (thing is Apparel apparel && apparel.Wearer != null)
+                {
+                    if (apparel is PoweredArmorPowerSource)
+                    {
+                        return (PoweredArmorPowerSource)apparel;
+                    }
+                    else
+                    {
+                        foreach (Apparel ap in apparel.Wearer.apparel.WornApparel)
+                        {
+                            if (ap is PoweredArmorPowerSource)
+                            {
+                                return (PoweredArmorPowerSource)ap;
+                            }
+                        }
+                    }
+                }
+                if (thing.TryGetComp<CompEquippable>() != null && thing.ParentHolder != null)
+                {
+                    Pawn_EquipmentTracker pawn_EquipmentTracker = thing.ParentHolder as Pawn_EquipmentTracker;
+                    if (pawn_EquipmentTracker != null && pawn_EquipmentTracker.pawn.apparel?.WornApparelCount > 0)
+                    {
+                        foreach (Apparel ap in pawn_EquipmentTracker.pawn.apparel.WornApparel)
+                        {
+                            if (ap is PoweredArmorPowerSource)
+                            {
+                                return (PoweredArmorPowerSource)ap;
+                            }
+                        }
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

@@ -33,5 +33,22 @@
 			</li>
 		</subSounds>
 	</SoundDef>
+	
+	<SoundDef>
+		<defName>Dragonian_Shutdown</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>  
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+					<clipFolderPath>Dragonian/Dragonian_Shutdown</clipFolderPath>
+					</li>
+				</grains>      
+				<volumeRange>25~35</volumeRange>      
+				<pitchRange>0.85~1.15</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
 </Defs>
  

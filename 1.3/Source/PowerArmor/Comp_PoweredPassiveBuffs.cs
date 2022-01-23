@@ -27,21 +27,7 @@ namespace Dragonian
         {
             get
             {
-                if(parent is PoweredArmorPowerSource ps)
-                {
-                    return ps;
-                }
-                else if(parent is Apparel apparel && apparel.Wearer != null)
-                {
-                    foreach(Apparel ap in apparel.Wearer.apparel.WornApparel)
-                    {
-                        if(ap is PoweredArmorPowerSource)
-                        {
-                            return (PoweredArmorPowerSource)ap;
-                        }
-                    }
-                }
-                return null;
+                return parent.FindPowerSource();
             }
         }
         public override void Notify_Equipped(Pawn pawn)

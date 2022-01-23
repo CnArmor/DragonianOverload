@@ -99,6 +99,10 @@ namespace Dragonian
         }
         private void Deactivate()
         {
+            if (base.Wearer.Spawned)
+            {
+                DragonianSoundDefOf.Dragonian_Shutdown.PlayOneShot(new TargetInfo(Wearer.Position, Wearer.Map, false));
+            }
             activeStatus = false;
             nextRebootTick = Find.TickManager.TicksGame + rebootTicks;
         }

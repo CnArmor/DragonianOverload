@@ -114,6 +114,7 @@ namespace Dragonian
     public class DragonianSoundDefOf
     {
         public static SoundDef Dragonian_Ability;
+        public static SoundDef Dragonian_Shutdown;
     }
 
     [DefOf]
