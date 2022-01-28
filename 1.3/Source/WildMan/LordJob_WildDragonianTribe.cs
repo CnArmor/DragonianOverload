@@ -41,23 +41,44 @@ namespace Dragonian
             LordToil letMeOut = new LordToil_ExitMap(LocomotionUrgency.Jog, true, true);
             stateGraph.AddToil(letMeOut);
 
+            //start wandering around after reaching gather spot
             Transition arriveSpot = new Transition(startingToil, wildDragonianGather, false, true);
             arriveSpot.AddTrigger(new Trigger_Memo("TravelArrived"));
             stateGraph.AddTransition(arriveSpot);
 
+            //leave peacefully after set time
             Transition leavePeacefully = new Transition(wildDragonianGather, exitMap, false, true);
-            leavePeacefully.AddTrigger(new Trigger_TicksPassedWithoutHarm(stayDuration));
-            leavePeacefully.AddTrigger(new Trigger_PawnExperiencingDangerousTemperatures());
+            leavePeacefully.AddTrigger(new Trigger_TicksPassed(stayDuration));
             leavePeacefully.AddPreAction(new TransitionAction_Message("DragonianTribeLeaving".Translate()));
             leavePeacefully.AddPostAction(new TransitionAction_WakeAll());
             leavePeacefully.AddPostAction(new TransitionAction_EndAllJobs());
             stateGraph.AddTransition(leavePeacefully);
 
+            //leave when facing extreme temperature
+            Transition leaveTemperature = new Transition(wildDragonianGather, exitMap, false, true);
+            leaveTemperature.AddSource(startingToil);
+            leaveTemperature.AddTrigger(new Trigger_PawnExperiencingDangerousTemperatures());
+            leaveTemperature.AddPreAction(new TransitionAction_Message("DragonianTribeLeavingTemperature".Translate()));
+            leaveTemperature.AddPostAction(new TransitionAction_WakeAll());
+            leaveTemperature.AddPostAction(new TransitionAction_EndAllJobs());
+            stateGraph.AddTransition(leaveTemperature);
+
+            //leave when starving
+            Transition leaveHungery = new Transition(wildDragonianGather, exitMap, false, true);
+            leaveHungery.AddSource(startingToil);
+            leaveHungery.AddTrigger(new Trigger_UrgentlyHungry());
+            leaveHungery.AddPreAction(new TransitionAction_Message("DragonianTribeLeavingHungry".Translate()));
+            leaveHungery.AddPostAction(new TransitionAction_WakeAll());
+            leaveHungery.AddPostAction(new TransitionAction_EndAllJobs());
+            stateGraph.AddTransition(leaveHungery);
+
+            //go manhunting when harmed
             Transition retaliateWhenHarmed = new Transition(wildDragonianGather, assultColony, false, true);
             retaliateWhenHarmed.AddSources(new LordToil[]
             {
                 startingToil,
-                letMeOut
+                letMeOut,
+                exitMap
             });
             retaliateWhenHarmed.AddTrigger(new Trigger_PawnHarmed(0.5f, true, Find.FactionManager.OfPlayer));
             retaliateWhenHarmed.AddTrigger(new Trigger_PawnLostViolently(true));
@@ -65,15 +86,16 @@ namespace Dragonian
             retaliateWhenHarmed.AddPostAction(new TransitionAction_WakeAll());
             retaliateWhenHarmed.AddPostAction(new TransitionAction_EndAllJobs());
             retaliateWhenHarmed.AddPostAction(new TransitionAction_GoMad());
-            
             stateGraph.AddTransition(retaliateWhenHarmed);
 
+            //flee when suffering casualty
             Transition runWhenKilled = new Transition(wildDragonianGather, exitMapFighting, false, true);
             runWhenKilled.AddSources(new LordToil[]
             {
                 startingToil,
                 assultColony,
-                letMeOut
+                letMeOut,
+                exitMap
             });
             runWhenKilled.AddPreAction(new TransitionAction_Message("DragonianTribeFlee".Translate()));
             runWhenKilled.AddTrigger(new Trigger_PawnsLost(casualtyBeforeRun));
@@ -82,8 +104,13 @@ namespace Dragonian
             runWhenKilled.AddPostAction(new TransitionAction_EndAllJobs());
             stateGraph.AddTransition(runWhenKilled);
 
+            //dig out when encaged in walls
             Transition runWhenEncaged = new Transition(wildDragonianGather, letMeOut, false, true);
-            runWhenEncaged.AddSource(startingToil);
+            runWhenEncaged.AddSources(new LordToil[]
+            {
+                startingToil,
+                exitMap
+            });
             runWhenEncaged.AddPreAction(new TransitionAction_Message("DragonianTribeBreakOut".Translate()));
             runWhenEncaged.AddTrigger(new Trigger_PawnCannotReachMapEdge());
             stateGraph.AddTransition(runWhenEncaged);

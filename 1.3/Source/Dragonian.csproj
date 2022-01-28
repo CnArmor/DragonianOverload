@@ -61,8 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HarmonyPatches\HarmonyPatch_AIDragonianAbility.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_StaggerImmunity.cs" />
     <Compile Include="Hediff\HediffComp_PoweredBuffs.cs" />
     <Compile Include="JobWork\JobDriver_FakeCastAbility.cs" />
+    <Compile Include="PowerArmor\Command_PoweredAbilityAction.cs" />
+    <Compile Include="PowerArmor\Comp_PoweredStaggerImmunity.cs" />
     <Compile Include="PowerArmor\Comp_PoweredPassiveBuffs.cs" />
     <Compile Include="PowerArmor\Gizmo_PowerStatus.cs" />
     <Compile Include="PowerArmor\PoweredSource.cs" />

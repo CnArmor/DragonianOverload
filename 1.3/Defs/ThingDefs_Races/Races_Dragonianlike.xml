@@ -25,6 +25,7 @@
 							<drawForFemale>true</drawForFemale>
 							<alignWithHead>true</alignWithHead>
 							<bodyTypeRequirement>Female</bodyTypeRequirement>
+							<debug>false</debug>
 							<offsets>
 								<east>
 									<layerOffset>-0.331</layerOffset>
@@ -43,6 +44,7 @@
 							<drawForFemale>true</drawForFemale>
 							<alignWithHead>true</alignWithHead>
 							<bodyTypeRequirement>Female</bodyTypeRequirement>
+							<debug>false</debug>
 							<offsets>
 								<east>
 									<layerOffset>-0.331</layerOffset>
@@ -61,6 +63,7 @@
 							<drawForFemale>false</drawForFemale>
 							<alignWithHead>true</alignWithHead>
 							<bodyTypeRequirement>Male</bodyTypeRequirement>
+							<debug>false</debug>
 							<offsets>
 								<east>
 									<layerOffset>-0.331</layerOffset>
@@ -79,6 +82,7 @@
 							<drawForFemale>false</drawForFemale>
 							<alignWithHead>true</alignWithHead>
 							<bodyTypeRequirement>Male</bodyTypeRequirement>
+							<debug>false</debug>
 							<offsets>
 								<east>
 									<layerOffset>-0.331</layerOffset>

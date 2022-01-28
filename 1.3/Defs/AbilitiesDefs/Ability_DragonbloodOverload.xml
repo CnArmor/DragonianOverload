@@ -18,16 +18,16 @@
 			<Ability_Duration>167</Ability_Duration>	<!-- in second. 1 second = 60 ticks, 2500 ticks = 1 in game hour, 41.67 seconds = 1 in game hour -->
 		</statBases>
 		<cooldownTicksRange>60000</cooldownTicksRange>
-		<stunTargetWhileCasting>False</stunTargetWhileCasting>
-		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-		<targetRequired>False</targetRequired>
+		<stunTargetWhileCasting>false</stunTargetWhileCasting>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<targetRequired>false</targetRequired>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
 			<warmupTime>0.5</warmupTime>
-			<range>0.1</range>
-			<drawAimPie>False</drawAimPie>
-			<requireLineOfSight>False</requireLineOfSight>
+			<range>-1</range>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
 			<targetParams>
 				<canTargetSelf>true</canTargetSelf>
 				<canTargetPawns>false</canTargetPawns>
@@ -41,7 +41,7 @@
 			<li Class="CompProperties_AbilityGiveHediff">
 				<compClass>CompAbilityEffect_GiveHediff</compClass>
 				<hediffDef>Dragonian_DragonbloodOverload</hediffDef>
-				<onlyApplyToSelf>True</onlyApplyToSelf>
+				<onlyApplyToSelf>true</onlyApplyToSelf>
 				<replaceExisting>true</replaceExisting>
 			</li>
 		</comps>

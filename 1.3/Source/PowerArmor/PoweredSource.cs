@@ -22,18 +22,25 @@ namespace Dragonian
                 return this.GetStatValue(DragonianStatDefOf.DRO_PowerRechargeRate, true) / 60f;
             }
         }
-        public float Power
-        {
-            get
-            {
-                return this.power;
-            }
-        }
         public bool IsActivated
         {
             get
             {
                 return this.activeStatus;
+            }
+        }
+        public Comp_PoweredStaggerImmunity StaggerImmunity
+        {
+            get
+            {
+                foreach(Apparel apparel in this.Wearer.apparel.WornApparel)
+                {
+                    if (apparel.TryGetComp<Comp_PoweredStaggerImmunity>() != null)
+                    {
+                        return apparel.TryGetComp<Comp_PoweredStaggerImmunity>();
+                    }
+                }
+                return null;
             }
         }
         public override void ExposeData()
@@ -80,14 +87,31 @@ namespace Dragonian
             if (power <= 0f && IsActivated)
                 Deactivate();
         }
-        public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
+        public override void PreApplyDamage(ref DamageInfo dinfo, out bool absorbed)
         {
-            if(dinfo.Def == DamageDefOf.EMP)
+            base.PreApplyDamage(ref dinfo, out absorbed);
+            if (dinfo.Def == DamageDefOf.EMP)
             {
                 Deactivate();
+                return;
             }
-            return false;
         }
+        public override void PostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
+        {
+            base.PostApplyDamage(dinfo, totalDamageDealt);
+            if (StaggerImmunity != null && StaggerImmunity.isActivated)
+            {
+                power -= StaggerImmunity.Props.powerCostPerHit;
+                if (power < 0f)
+                {
+                    power = 0f;
+                    StaggerImmunity.isActivated = false;
+                    StaggerImmunity.cooldownTicksRemaining = StaggerImmunity.Props.coolDownTicks;
+                }
+
+            }
+        }
+
         private void Activate()
         {
             if (base.Wearer.Spawned)
@@ -96,6 +120,8 @@ namespace Dragonian
                 FleckMaker.ThrowLightningGlow(base.Wearer.TrueCenter(), base.Wearer.Map, 3f);
             }
             activeStatus = true;
+            if (power == 0f)
+                power = 1f;
         }
         private void Deactivate()
         {
@@ -105,8 +131,13 @@ namespace Dragonian
             }
             activeStatus = false;
             nextRebootTick = Find.TickManager.TicksGame + rebootTicks;
+            if (StaggerImmunity != null)
+            {
+                StaggerImmunity.isActivated = false;
+                StaggerImmunity.cooldownTicksRemaining = StaggerImmunity.Props.coolDownTicks;
+            }
         }
-        private float power = 1f;
+        public float power = 1f;
         private bool activeStatus = true;
         private int rebootTicks = 1200;
         private int nextRebootTick;

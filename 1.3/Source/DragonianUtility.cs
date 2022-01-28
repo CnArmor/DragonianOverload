@@ -59,7 +59,7 @@ namespace Dragonian
                 if (thing.TryGetComp<CompEquippable>() != null && thing.ParentHolder != null)
                 {
                     Pawn_EquipmentTracker pawn_EquipmentTracker = thing.ParentHolder as Pawn_EquipmentTracker;
-                    if (pawn_EquipmentTracker != null && pawn_EquipmentTracker.pawn.apparel?.WornApparelCount > 0)
+                    if (pawn_EquipmentTracker != null && pawn_EquipmentTracker.pawn?.apparel?.WornApparelCount > 0)
                     {
                         foreach (Apparel ap in pawn_EquipmentTracker.pawn.apparel.WornApparel)
                         {

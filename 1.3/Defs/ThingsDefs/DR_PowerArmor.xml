@@ -79,6 +79,17 @@
 			<li Class="Dragonian.CompProperties_PoweredPassiveBuffs">
 				<hediff>Dragonian_PowerArmorBuffs</hediff>
 			</li>
+			<li Class="Dragonian.CompProperties_PoweredStaggerImmunity">
+				<powerCostPerHit>10</powerCostPerHit>
+				<incommingDamageMutiplier>0.9</incommingDamageMutiplier>
+				<coolDownTicks>480</coolDownTicks>
+				<label>Impact Dampener</label>
+				<description>Utilize power to abosord a portion of the impact, reduce its potency and prevent the wearer from being staggered.</description>
+				<iconPathActive>UI/Abilities/Dragonian_StaggerImmunityOn</iconPathActive>
+				<iconPathInactive>UI/Abilities/Dragonian_StaggerImmunityOff</iconPathInactive>
+				<activateSound>Dragonian_Ability</activateSound>
+				<deactivateSound>Dragonian_Shutdown</deactivateSound>
+			</li>
 		</comps>
 	</ThingDef>
 	

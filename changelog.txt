@@ -1,3 +1,14 @@
+0.6.3
+- Further improved wild dragonian tribe event.
+- Added a toggleable ability that uses the power armor's power source.
+	- When turned on, provide wearer stagger immunity and reduce damage taken, with each hit recieved draining power.
+- Fixed some typos.
+
+0.6.2
+- Changed Dragonblood Overload icon.
+- Added tongue to dragonians.
+- Added sound effect for power armor shut down.
+
 0.6.1
 - Added Dragonian power armor and power helmet.
 - Added basic power function to dragonian power armor.

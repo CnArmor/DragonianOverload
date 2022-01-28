@@ -26,7 +26,7 @@ namespace Dragonian
             Widgets.Label(rect3, this.powerSource.LabelCap);
             Rect rect4 = rect2;
             rect4.yMin = rect2.y + rect2.height / 2f;
-            float fillPercent = this.powerSource.Power / Mathf.Max(1f, this.powerSource.GetStatValue(DragonianStatDefOf.DRO_PowerMax, true));
+            float fillPercent = this.powerSource.power / Mathf.Max(1f, this.powerSource.GetStatValue(DragonianStatDefOf.DRO_PowerMax, true));
             if (powerSource.IsActivated)
             {
                 Widgets.FillableBar(rect4, fillPercent, powerBarActivatedTex, powerBarEmptyTex, false);
@@ -37,7 +37,7 @@ namespace Dragonian
             }
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(rect4, (this.powerSource.Power).ToString("F0") + " / " + (this.powerSource.GetStatValue(DragonianStatDefOf.DRO_PowerMax, true)).ToString("F0"));
+            Widgets.Label(rect4, (this.powerSource.power).ToString("F0") + " / " + (this.powerSource.GetStatValue(DragonianStatDefOf.DRO_PowerMax, true)).ToString("F0"));
             Text.Anchor = TextAnchor.UpperLeft;
             return new GizmoResult(GizmoState.Clear);
         }
