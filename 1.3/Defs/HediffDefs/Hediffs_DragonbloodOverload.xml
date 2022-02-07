@@ -11,9 +11,7 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<everCurableByItem>false</everCurableByItem>
-		<extraTooltip>    Melee damage: +20%
-    Melee cooldown: -40%
-    Cause permanent burns</extraTooltip>
+		<extraTooltip>     Cause permanent burns</extraTooltip>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<showRemainingTime>True</showRemainingTime>
@@ -31,13 +29,6 @@
 				<stopDamageThreshold>0.2</stopDamageThreshold>
 			</li>
 		</comps>
-		<modExtensions>
-			<li Class = "Dragonian.MeleeModifier">
-				<!-- numbers are multiplicative -->
-				<meleeDamageMultiplier>1.2</meleeDamageMultiplier>
-				<meleeCooldownMultiplier>0.6</meleeCooldownMultiplier>
-			</li>
-		</modExtensions>
 		<stages>
 			<li>
 				<becomeVisible>true</becomeVisible>
@@ -55,6 +46,8 @@
 				<statOffsets>
 					<MoveSpeed>2</MoveSpeed>
 					<IncomingDamageFactor>-0.5</IncomingDamageFactor>
+					<DRO_MeleeDamageMultiplier>0.2</DRO_MeleeDamageMultiplier>
+					<DRO_MeleeCooldownMultiplier>-0.4</DRO_MeleeCooldownMultiplier>
 				</statOffsets>
 			</li>
 		</stages>

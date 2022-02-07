@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<HediffDef>
-		<defName>Dragonian_PowerArmorBuffs</defName>
+		<defName>Dragonian_PowerArmor</defName>
 		<description>The dragonian power armor can provide various passive benefits when its power source is activated.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>power armor</label>
@@ -14,9 +14,7 @@
 		<extraTooltip/>
 		<comps>
 			<li Class="HediffCompProperties_RemoveIfApparelDropped"/>
-			<li>
-				<compClass>Dragonian.HediffComp_PoweredBuffs</compClass>
-			</li>
+			<li Class="Dragonian.HediffCompProperties_PoweredHediff"/>
 		</comps>
 		<stages>
 			<li>
@@ -39,7 +37,7 @@
 	</HediffDef>
 	
 	<HediffDef>
-		<defName>Dragonian_PowerHelmetBuffs</defName>
+		<defName>Dragonian_PowerHelmet</defName>
 		<description>The dragonian power armor helmet can provide various passive benefits when a power source is present and activated.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>power helmet</label>
@@ -52,9 +50,7 @@
 		<extraTooltip/>
 		<comps>
 			<li Class="HediffCompProperties_RemoveIfApparelDropped"/>
-			<li>
-				<compClass>Dragonian.HediffComp_PoweredBuffs</compClass>
-			</li>
+			<li Class="Dragonian.HediffCompProperties_PoweredHediff"/>
 		</comps>
 		<stages>
 			<li>
@@ -70,6 +66,60 @@
 					<MeleeHitChance>4.0</MeleeHitChance>
 					<ComfyTemperatureMin>-4.0</ComfyTemperatureMin>
 					<ComfyTemperatureMax>4.0</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>Dragonian_BattleHammer</defName>
+		<description>test</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>battle hammer</label>
+		<defaultLabelColor>(0.63, 0.96, 0.97)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<extraTooltip/>
+		<comps>
+			<li Class="Dragonian.HediffCompProperties_PoweredHediff"/>
+		</comps>
+		<stages>
+			<li>
+				<overrideLabel>battle hammer: Offline</overrideLabel>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<overrideLabel>battle hammer: Online</overrideLabel>
+				<becomeVisible>true</becomeVisible>
+				<minSeverity>0.5</minSeverity>
+				<statOffsets>
+					<MeleeHitChance>8.0</MeleeHitChance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>Dragonian_ImpactDampener</defName>
+		<description>Utilize power to dampen any incoming impact, reducing damage taken and preventing the user from being staggered.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>impact dampener</label>
+		<defaultLabelColor>(0.63, 0.96, 0.97)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<extraTooltip/>
+		<comps>
+			<li Class="Dragonian.HediffCompProperties_RemoveIfAbilityRemoved"/>
+			<li Class="Dragonian.HediffCompProperties_RemoveIfPowerSourceNullOrInactive"/>
+		</comps>
+		<stages>
+			<li>
+				<statOffsets>
+					<IncomingDamageFactor>-0.05</IncomingDamageFactor>
 				</statOffsets>
 			</li>
 		</stages>

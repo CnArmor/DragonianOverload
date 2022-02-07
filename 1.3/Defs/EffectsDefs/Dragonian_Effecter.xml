@@ -52,13 +52,13 @@
 	</EffecterDef>
 	
 	<EffecterDef>
-		<defName>Dragonian_Effecter_Shy_south</defName>
+		<defName>Dragonian_Effecter_Blush_south</defName>
 		<children>
 			<li>
 				<subEffecterClass>SubEffecter_DrifterEmoteContinuous</subEffecterClass>
 				<scale>0.4</scale>
 				<positionRadius>0</positionRadius>
-				<moteDef>Dragonian_Mote_Shy_south</moteDef>
+				<moteDef>Dragonian_Mote_Blush_south</moteDef>
 				<ticksBetweenMotes>60</ticksBetweenMotes>
 				<speed>0~0</speed>
 				<absoluteAngle>true</absoluteAngle>
@@ -69,13 +69,13 @@
 	</EffecterDef>
 	
 	<EffecterDef>
-		<defName>Dragonian_Effecter_Shy_north</defName>
+		<defName>Dragonian_Effecter_Blush_north</defName>
 		<children>
 			<li>
 				<subEffecterClass>SubEffecter_DrifterEmoteContinuous</subEffecterClass>
 				<scale>0.4</scale>
 				<positionRadius>0</positionRadius>
-				<moteDef>Dragonian_Mote_Shy_north</moteDef>
+				<moteDef>Dragonian_Mote_Blush_north</moteDef>
 				<ticksBetweenMotes>60</ticksBetweenMotes>
 				<speed>0~0</speed>
 				<absoluteAngle>true</absoluteAngle>
@@ -86,13 +86,13 @@
 	</EffecterDef>
 	
 	<EffecterDef>
-		<defName>Dragonian_Effecter_Shy_east</defName>
+		<defName>Dragonian_Effecter_Blush_east</defName>
 		<children>
 			<li>
 				<subEffecterClass>SubEffecter_DrifterEmoteContinuous</subEffecterClass>
 				<scale>0.3</scale>
 				<positionRadius>0</positionRadius>
-				<moteDef>Dragonian_Mote_Shy_east</moteDef>
+				<moteDef>Dragonian_Mote_Blush_east</moteDef>
 				<ticksBetweenMotes>60</ticksBetweenMotes>
 				<speed>0~0</speed>
 				<absoluteAngle>true</absoluteAngle>
@@ -103,13 +103,13 @@
 	</EffecterDef>
 	
 	<EffecterDef>
-		<defName>Dragonian_Effecter_Shy_west</defName>
+		<defName>Dragonian_Effecter_Blush_west</defName>
 		<children>
 			<li>
 				<subEffecterClass>SubEffecter_DrifterEmoteContinuous</subEffecterClass>
 				<scale>0.3</scale>
 				<positionRadius>0</positionRadius>
-				<moteDef>Dragonian_Mote_Shy_west</moteDef>
+				<moteDef>Dragonian_Mote_Blush_west</moteDef>
 				<ticksBetweenMotes>60</ticksBetweenMotes>
 				<speed>0~0</speed>
 				<absoluteAngle>true</absoluteAngle>

@@ -6,7 +6,8 @@
 	<DragonianTribeRetaliate>The wild dragonians are enraged by your attack!</DragonianTribeRetaliate>
 	<DragonianTribeFlee>The wild dragonians are fleeing.</DragonianTribeFlee>
 	<DragonianTribeBreakOut>The wild dragonians are trapped. They will try to break out and flee.</DragonianTribeBreakOut>
-	<DragonianPowerCoolDown>The ability is on cooldown.</DragonianPowerCoolDown>
+	<DragonianPowerCoolDown>This ability is on cooldown.</DragonianPowerCoolDown>
+	<DragonianPowerDiactivated>The power source is in shutdown.</DragonianPowerDiactivated>
 	<DragonianIncommingDamageMultiplier>Incomming damage multiplier: </DragonianIncommingDamageMultiplier>
 	<DragonianPowerDrainPerHit>Power drain per hit recieved: </DragonianPowerDrainPerHit>
 </LanguageData>

@@ -62,23 +62,28 @@
   <ItemGroup>
     <Compile Include="HarmonyPatches\HarmonyPatch_AIDragonianAbility.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_StaggerImmunity.cs" />
-    <Compile Include="Hediff\HediffComp_PoweredBuffs.cs" />
+    <Compile Include="Hediff\HediffComp_PoweredHediff.cs" />
     <Compile Include="JobWork\JobDriver_FakeCastAbility.cs" />
+    <Compile Include="PowerArmor\Command_PoweredAbility.cs" />
     <Compile Include="PowerArmor\Command_PoweredAbilityAction.cs" />
+    <Compile Include="PowerArmor\CompAbilityEffect_ToggleableHediff.cs" />
+    <Compile Include="PowerArmor\Comp_EquipmentGivesAbilities.cs" />
+    <Compile Include="PowerArmor\Comp_EquipmentGivesHediffs.cs" />
     <Compile Include="PowerArmor\Comp_PoweredStaggerImmunity.cs" />
-    <Compile Include="PowerArmor\Comp_PoweredPassiveBuffs.cs" />
     <Compile Include="PowerArmor\Gizmo_PowerStatus.cs" />
-    <Compile Include="PowerArmor\PoweredSource.cs" />
+    <Compile Include="PowerArmor\HediffComp_RemoveIfAbilityRemoved.cs" />
+    <Compile Include="PowerArmor\HediffComp_RemoveIfPowerSourceNullOrInactive.cs" />
+    <Compile Include="PowerArmor\ModExtensionPoweredAbility.cs" />
+    <Compile Include="PowerArmor\PoweredAbility.cs" />
+    <Compile Include="PowerArmor\PowerSource.cs" />
     <Compile Include="WildMan\JobGiver_ComeBackNearDutyLocation.cs" />
     <Compile Include="WildMan\LordJob_WildDragonianTribe.cs" />
-    <Compile Include="DragonianEffecter.cs" />
     <Compile Include="DragonianUtility.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_Wildman.cs" />
     <Compile Include="WildMan\IncidentWorker_WildDragonianTribe.cs" />
     <Compile Include="JobWork\JobDriver_SelfMilkDragonian.cs" />
     <Compile Include="WildMan\LordToil_WildDragonianGather.cs" />
     <Compile Include="JobWork\WorkGiver_SelfMilkDragonian.cs" />
-    <Compile Include="DefModExtensions.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_DragonianInitial.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MeleeAttack.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_WeaponRestriction.cs" />
@@ -90,7 +95,7 @@
     <Compile Include="Hediff\HediffComp_DragonbloodOverload.cs" />
     <Compile Include="JobWork\WorkGiver_GatherDragonianBodyResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StartupSetting.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

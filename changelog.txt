@@ -1,3 +1,8 @@
+0.6.4
+- Optimized some code
+- Rewrote the framework for powered abilities to be more easier expandable.
+- Added turn on and turn off sound to stagger immunity.
+
 0.6.3
 - Further improved wild dragonian tribe event.
 - Added a toggleable ability that uses the power armor's power source.

@@ -61,6 +61,13 @@
 				</extraMeleeDamages>
 			</li>
 		</tools>
+		<comps>
+			<li Class="Dragonian.CompProperties_EquipmentGivesHediffs">
+				<hediffs>
+					<li>Dragonian_BattleHammer</li>
+				</hediffs>
+			</li>
+		</comps>
 	</ThingDef>	
 
 	<!-- <DamageDef ParentName="Bite"> -->

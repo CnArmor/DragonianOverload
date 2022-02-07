@@ -49,9 +49,9 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="MoteBase">
-		<defName>Dragonian_Mote_Shy_south</defName>
+		<defName>Dragonian_Mote_Blush_south</defName>
 		<graphicData>
-			<texPath>Things/Mote/Dragonian_Shy</texPath>
+			<texPath>Things/Mote/Dragonian_Blush</texPath>
 			<shaderType>Mote</shaderType>
 		</graphicData>
 		<thingClass>MoteAttached</thingClass>
@@ -65,9 +65,9 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="MoteBase">
-		<defName>Dragonian_Mote_Shy_north</defName>
+		<defName>Dragonian_Mote_Blush_north</defName>
 		<graphicData>
-			<texPath>Things/Mote/Dragonian_Shy</texPath>
+			<texPath>Things/Mote/Dragonian_Blush</texPath>
 			<shaderType>Mote</shaderType>
 		</graphicData>
 		<thingClass>MoteAttached</thingClass>
@@ -81,9 +81,9 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="MoteBase">
-		<defName>Dragonian_Mote_Shy_east</defName>
+		<defName>Dragonian_Mote_Blush_east</defName>
 		<graphicData>
-			<texPath>Things/Mote/Dragonian_Shy</texPath>
+			<texPath>Things/Mote/Dragonian_Blush</texPath>
 			<shaderType>Mote</shaderType>
 		</graphicData>
 		<thingClass>MoteAttached</thingClass>
@@ -97,9 +97,9 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="MoteBase">
-		<defName>Dragonian_Mote_Shy_west</defName>
+		<defName>Dragonian_Mote_Blush_west</defName>
 		<graphicData>
-			<texPath>Things/Mote/Dragonian_Shy</texPath>
+			<texPath>Things/Mote/Dragonian_Blush</texPath>
 			<shaderType>Mote</shaderType>
 		</graphicData>
 		<thingClass>MoteAttached</thingClass>

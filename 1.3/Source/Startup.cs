@@ -56,6 +56,7 @@ namespace Dragonian
     public class DragonianAbilityDefOf
     {
         public static AbilityDef Dragonian_DragonbloodOverload;
+        public static AbilityDef Dragonian_PoweredStaggerImmunity;
     }
 
     [DefOf]
@@ -84,10 +85,10 @@ namespace Dragonian
     [DefOf]
     public class DragonianEffecterDefOf
     {
-        public static EffecterDef Dragonian_Effecter_Shy_north;
-        public static EffecterDef Dragonian_Effecter_Shy_south;
-        public static EffecterDef Dragonian_Effecter_Shy_east;
-        public static EffecterDef Dragonian_Effecter_Shy_west;
+        public static EffecterDef Dragonian_Effecter_Blush_north;
+        public static EffecterDef Dragonian_Effecter_Blush_south;
+        public static EffecterDef Dragonian_Effecter_Blush_east;
+        public static EffecterDef Dragonian_Effecter_Blush_west;
         public static EffecterDef Dragonian_Effecter_Sweat;
     }
 
@@ -122,6 +123,8 @@ namespace Dragonian
     {
         public static StatDef DRO_PowerMax;
         public static StatDef DRO_PowerRechargeRate;
+        public static StatDef DRO_MeleeDamageMultiplier;
+        public static StatDef DRO_MeleeCooldownMultiplier;
     }
 
     [HarmonyPatch(typeof(ForbidUtility))]

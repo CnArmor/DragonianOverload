@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
@@ -55,4 +55,4 @@ namespace Dragonian
 		private static Texture2D cooldownBarTex = SolidColorMaterials.NewSolidColorTexture(new Color32(9, 203, 4, 64));
 		public Comp_PoweredStaggerImmunity comp;
 	}
-}
+}*/

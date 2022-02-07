@@ -29,16 +29,13 @@ namespace Dragonian
                 return this.activeStatus;
             }
         }
-        public Comp_PoweredStaggerImmunity StaggerImmunity
+        public PoweredAbility StaggerImmunity
         {
             get
             {
-                foreach(Apparel apparel in this.Wearer.apparel.WornApparel)
+                if(Wearer?.abilities.GetAbility(DragonianAbilityDefOf.Dragonian_PoweredStaggerImmunity) != null)
                 {
-                    if (apparel.TryGetComp<Comp_PoweredStaggerImmunity>() != null)
-                    {
-                        return apparel.TryGetComp<Comp_PoweredStaggerImmunity>();
-                    }
+                    return (PoweredAbility)Wearer.abilities.GetAbility(DragonianAbilityDefOf.Dragonian_PoweredStaggerImmunity);
                 }
                 return null;
             }
@@ -46,8 +43,9 @@ namespace Dragonian
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look<float>(ref this.power, "Dragonian.PoweredArmorPowerSource.power", 0f, false);
-            Scribe_Values.Look<int>(ref this.nextRebootTick, "Dragonian.PoweredArmorPowerSource.nextRebootTick", 0, false);
+            Scribe_Values.Look<float>(ref this.power, "PowerSource.power", 0f, false);
+            Scribe_Values.Look<int>(ref this.nextRebootTick, "PowerSource.nextRebootTick", 0, false);
+            Scribe_Values.Look<bool>(ref this.activeStatus, "PowerSource.activeStatus", true, false);
         }
         public override IEnumerable<Gizmo> GetWornGizmos()
         {
@@ -77,39 +75,35 @@ namespace Dragonian
                 }
                 return;
             }
+            if (power <= 0f && IsActivated)
+                Deactivate();
             if (power != PowerMax)
             {
                 power += PowerRechargeRate;
                 if (power > PowerMax)
                     power = PowerMax;
             }
-
-            if (power <= 0f && IsActivated)
-                Deactivate();
         }
-        public override void PreApplyDamage(ref DamageInfo dinfo, out bool absorbed)
+        public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
         {
-            base.PreApplyDamage(ref dinfo, out absorbed);
             if (dinfo.Def == DamageDefOf.EMP)
             {
+                //Log.Message("EMP Damage recieved, deactivating");
                 Deactivate();
-                return;
             }
+            return base.CheckPreAbsorbDamage(dinfo);
         }
         public override void PostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
         {
-            base.PostApplyDamage(dinfo, totalDamageDealt);
-            if (StaggerImmunity != null && StaggerImmunity.isActivated)
+            if (StaggerImmunity != null && StaggerImmunity.isActive)
             {
-                power -= StaggerImmunity.Props.powerCostPerHit;
+                power -= StaggerImmunity.def.GetModExtension<DefModExtension_PoweredAbility>().powerCostPerHitDamageFactor * dinfo.Amount;
                 if (power < 0f)
                 {
                     power = 0f;
-                    StaggerImmunity.isActivated = false;
-                    StaggerImmunity.cooldownTicksRemaining = StaggerImmunity.Props.coolDownTicks;
                 }
-
             }
+            base.PostApplyDamage(dinfo, totalDamageDealt);
         }
 
         private void Activate()
@@ -131,11 +125,6 @@ namespace Dragonian
             }
             activeStatus = false;
             nextRebootTick = Find.TickManager.TicksGame + rebootTicks;
-            if (StaggerImmunity != null)
-            {
-                StaggerImmunity.isActivated = false;
-                StaggerImmunity.cooldownTicksRemaining = StaggerImmunity.Props.coolDownTicks;
-            }
         }
         public float power = 1f;
         private bool activeStatus = true;

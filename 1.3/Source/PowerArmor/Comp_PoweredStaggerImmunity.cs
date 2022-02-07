@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿/*using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -124,7 +124,7 @@ namespace Dragonian
             {
                 command.Disable(null);
             }
-            if (IsInCoolDown)
+            if (IsInCoolDown || !PowerSource.IsActivated)
             {
                 command.Disable(DisableReason());
             }
@@ -138,6 +138,10 @@ namespace Dragonian
             if (IsInCoolDown)
             {
                 result = "DragonianPowerCoolDown".Translate();
+            }
+            if (!PowerSource.IsActivated)
+            {
+                result = "DragonianPowerDiactivated".Translate();
             }
             return result;
         }
@@ -155,4 +159,4 @@ namespace Dragonian
         [MustTranslate]
         public string finalDescription;
     }
-}
+}*/

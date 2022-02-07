@@ -2,6 +2,7 @@
 using System.Linq;
 using HarmonyLib;
 using System;
+using RimWorld;
 
 namespace Dragonian
 {
@@ -12,10 +13,12 @@ namespace Dragonian
         [HarmonyPostfix]
         private static void VerbProperties_AdjustedEquipmentMeleeDamageAmountPostfix(ref float __result, Pawn attacker)
         {
-            if (attacker.IsDragonian()
-                && attacker.health.hediffSet.HasHediff(DragonianHediffDefOf.Dragonian_DragonbloodOverload))
+            if(attacker != null)
             {
-                __result = __result * DragonianHediffDefOf.Dragonian_DragonbloodOverload.GetModExtension<MeleeModifier>().meleeDamageMultiplier;
+                if (attacker.GetStatValue(DragonianStatDefOf.DRO_MeleeDamageMultiplier) != 1f)
+                {
+                    __result *= attacker.GetStatValue(DragonianStatDefOf.DRO_MeleeDamageMultiplier);
+                }
             }
         }
     }
@@ -27,10 +30,12 @@ namespace Dragonian
         [HarmonyPostfix]
         private static void VerbProperties_AdjustedBarehandMeleeDamageAmountPostfix(ref float __result, Pawn attacker)
         {
-            if (attacker.IsDragonian()
-                && attacker.health.hediffSet.HasHediff(DragonianHediffDefOf.Dragonian_DragonbloodOverload))
+            if (attacker != null)
             {
-                __result = __result * DragonianHediffDefOf.Dragonian_DragonbloodOverload.GetModExtension<MeleeModifier>().meleeDamageMultiplier;
+                if (attacker.GetStatValue(DragonianStatDefOf.DRO_MeleeDamageMultiplier) != 1f)
+                {
+                    __result *= attacker.GetStatValue(DragonianStatDefOf.DRO_MeleeDamageMultiplier);
+                }
             }
         }
     }
@@ -42,10 +47,12 @@ namespace Dragonian
         [HarmonyPostfix]
         private static void VerbProperties_AdjustedEquipmentMeleeCooldownPostfix(ref float __result, ref VerbProperties __instance, Pawn attacker)
         {
-            if (__instance.IsMeleeAttack && attacker.IsDragonian() 
-                && attacker.health.hediffSet.HasHediff(DragonianHediffDefOf.Dragonian_DragonbloodOverload))
+            if (attacker != null)
             {
-                __result = __result * DragonianHediffDefOf.Dragonian_DragonbloodOverload.GetModExtension<MeleeModifier>().meleeCooldownMultiplier;
+                if (__instance.IsMeleeAttack && attacker.GetStatValue(DragonianStatDefOf.DRO_MeleeCooldownMultiplier) != 1f)
+                {
+                    __result *= attacker.GetStatValue(DragonianStatDefOf.DRO_MeleeCooldownMultiplier);
+                }
             }
         }
     }
@@ -53,14 +60,16 @@ namespace Dragonian
     [HarmonyPatch(typeof(VerbProperties), "AdjustedCooldown", new Type[] { typeof(Tool), typeof(Pawn), typeof(ThingDef), typeof(ThingDef) })]
     public class Patch_VerbProperties_AdjustedBarehandMeleeCooldown
     {
-        [HarmonyPostfix]
         //patches bare hand melee cooldown
+        [HarmonyPostfix]
         private static void VerbProperties_AdjustedBarehandMeleeCooldownPostfix(ref float __result, ref VerbProperties __instance, Pawn attacker)
         {
-            if (__instance.IsMeleeAttack && attacker.IsDragonian()
-                && attacker.health.hediffSet.HasHediff(DragonianHediffDefOf.Dragonian_DragonbloodOverload))
+            if (attacker != null)
             {
-                __result = __result * DragonianHediffDefOf.Dragonian_DragonbloodOverload.GetModExtension<MeleeModifier>().meleeCooldownMultiplier;
+                if (__instance.IsMeleeAttack && attacker.GetStatValue(DragonianStatDefOf.DRO_MeleeCooldownMultiplier) != 1f)
+                {
+                    __result *= attacker.GetStatValue(DragonianStatDefOf.DRO_MeleeCooldownMultiplier);
+                }
             }
         }
     }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AbilityDef>
+		<abilityClass>Dragonian.PoweredAbility</abilityClass>
+		<defName>Dragonian_PoweredStaggerImmunity</defName>
+		<label>impact dampener</label>
+		<description>Utilize power to abosord a portion of the impact, reduce its potency and prevent the wearer from being staggered.</description>
+		<iconPath>UI/Abilities/Dragonian_StaggerImmunityOn</iconPath>
+		<warmupStartSound>Dragonian_TurnOn</warmupStartSound>
+		<cooldownTicksRange>600</cooldownTicksRange>
+		<stunTargetWhileCasting>false</stunTargetWhileCasting>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<targetRequired>false</targetRequired>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>0</warmupTime>
+			<range>-1</range>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<modExtensions>
+            <li Class="Dragonian.DefModExtension_PoweredAbility">
+                <toggleable>true</toggleable>
+				<inactiveIcon>UI/Abilities/Dragonian_StaggerImmunityOff</inactiveIcon>
+				<deactivateSound>Dragonian_TurnOff</deactivateSound>
+				<powerCostPerHitDamageFactor>0.5</powerCostPerHitDamageFactor>
+            </li>
+        </modExtensions>
+		<comps>
+			<li Class="Dragonian.CompProperties_ToggleableHediff">
+				<hediffDef>Dragonian_ImpactDampener</hediffDef>
+			</li>
+		</comps>
+	</AbilityDef>
+</Defs>

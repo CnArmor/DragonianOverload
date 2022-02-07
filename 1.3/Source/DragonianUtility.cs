@@ -70,7 +70,51 @@ namespace Dragonian
                         }
                     }
                 }
+                if (thing is Pawn pawn)
+                {
+                    if(pawn.apparel?.WornApparelCount > 0)
+                    {
+                        foreach (Apparel ap in pawn.apparel.WornApparel)
+                        {
+                            if(ap is PoweredArmorPowerSource)
+                            {
+                                return (PoweredArmorPowerSource)ap;
+                            }
+                        } 
+                    }
+                }
             }
+            return null;
+        }
+        public static EffecterDef DirectionalBlushEffecterDef(this Pawn pawn)
+        {
+            if (pawn != null)
+            {
+                //Log.Message("Pawn: " + pawn.Name + ", Rotation: " + pawn.Rotation + " (South: " + Rot4.South + " North: " + Rot4.North + " East: " + Rot4.East + " West: " + Rot4.West + ")");
+                if (pawn.Rotation == Rot4.South)
+                {
+                    //Log.Message("Return south def");
+                    return DragonianEffecterDefOf.Dragonian_Effecter_Blush_south;
+                }
+                if (pawn.Rotation == Rot4.North)
+                {
+                    //Log.Message("Return north def");
+                    return DragonianEffecterDefOf.Dragonian_Effecter_Blush_north;
+                }
+                if (pawn.Rotation == Rot4.East)
+                {
+                    //Log.Message("Return east def");
+                    return DragonianEffecterDefOf.Dragonian_Effecter_Blush_east;
+                }
+                if (pawn.Rotation == Rot4.West)
+                {
+                    //Log.Message("Return west def");
+                    return DragonianEffecterDefOf.Dragonian_Effecter_Blush_west;
+                }
+                //Log.Message("Error no rotation found");
+                return null;
+            }
+            //Log.Message("Error pawn is null");
             return null;
         }
     }
